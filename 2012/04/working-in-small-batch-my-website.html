@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Thomas scrapbook</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="../../stylesheets/base.css">
+	<link rel="stylesheet" href="../../stylesheets/skeleton.css">
+	<link rel="stylesheet" href="../../stylesheets/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+</head>
+<body>
+	<div class="container">
+	  <div class="row remove-bottom">
+  		<div class="fourteen columns">
+  			<h1 class="remove-bottom"><a href="../../index.html">Thomas notes</a></h1>
+  		</div>
+      <div id="nav" class="two columns remove-bottom">
+        <ul class="remove-bottom">
+          <li class="remove-bottom"><a href="/aboutme.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="sixteen columns" style="margin-top: 2px;"/>
+    <!-- End of header -->
+    
+    <div class="nine columns">
+
+
+<h3 id="working_in_small_batch_starting_a_website">Working in small batch: starting a website</h3>
+
+<p>I tend to have tons of great ideas of stuff to do, but quite sadly most of them just end up in a huge mental stack that never seems to go down. The more ideas I have, the more frustrated I get that nothing actually gets <em>done</em>.
+I do spend a lot of time on those ideas, mostly when they come up. The luckiest get my attention for a few day, but no matter how much time I spend, they never leave the state of great ideas that I just did not finish.</p>
+
+<p>Those symptoms are not unlike the problems that a lot of companies face: they spend a lot of time working on new features, on a new process that will revolutionize how work is done but often nothing gets out of that work: no code is rolled in production or the slides end up in the trash of some executive that will never have time to approve them.
+When dealing with product, agile practices encourage small iteration and frequent releases. In a company, lean practices recommend working in very small batch that follow a complete design-develop-test cycle. It occured to me recently, that those principles could very well be applied to my own personal projects.</p>
+
+<p>I bought sarfata.org a long time ago and first uploaded a static html page that I updated when I had something to say. It was very basic: some &lt;p&gt; some &lt;hr&gt; and I had a perfectly fine website for the early 2000s. A few years ago, I upgraded this website to wordpress and hosted it on a rented server. I migrated my older posts from html to wordpress and posted a very few articles. This server hosted a few wordpress sites and unfortunately got hacked one day (the forensic analysis of this server is a story for another day). When I realized that the server was compromised, I backuped the content and turned it off. Since then, sarfata.org is just a blank page.</p>
+
+<p>Away on vacations, I started having more and more ideas of things to publish on my no-longer blog. My first project quickly became a new version of sarfata.org. This quickly became an exciting endeavour involving nodeJS, a git-based publication system and markdown for writing article (see joehewitt.org description of his new website for more ideas).
+One sometime has to stop his brain to limit the difference between ideas and actions. Thinking small batch and deciding to commit myself to work in short burst, each followed by an output has made a tremendous difference to how I looked at this project. It was no more about how many fun technologies I am going to learn on the way but rather how simple can I make it.</p>
+
+<p>I have learnt that jumping right in a code editor (or photoshop for the more design-inspired) is never the correct way to start a project. Pen and paper are amazing tools whose power I am slowly starting to acknowledge. I made a list of the tasks needed to roll a first version of this website:</p>
+
+<ul>
+<li>Storyboard the homepage</li>
+<li>Storyboard an article page</li>
+<li>Design the homepage and the article page in photoshop</li>
+<li>Build the homepage and article page in html</li>
+<li>Upload an empty homepage</li>
+<li>Write and upload an about me page</li>
+</ul>
+
+<p>The incredible power of tasks list is that they allow you to realize that even the simplest thing like &#8220;building a homepage in static html&#8221; actually involves a lot more.</p>
+
+<p>I had bought Omnigrafle on my iPad a while ago and decided to give it a try for simple storyboarding. It turned out to be a great tool. I used the web browser from the recently included Konagi stencils to give perspective and constraints to my design, shared layers to reuse header and footer accross my two pages, and blocks of random text from the same stencils kit to simulate content. In about an hour, I had my two pages designed.</p>
+
+<p>The Omnigrafle result looked so good that I skipped the design phase (I would not have done much better in Photoshop anyways) and jumped to html. I had heard about grid css framework to quickly bootstrap a project and chose Skeleton (getskeleton.org) after a quick google search. I am kind of ashamed to say that it feels good to finally design again with tables in mind &#8230;</p>
+
+<p>I had to rework the todo list a little bit after that because my storyboard included my twitter feed which I had not thought about in my first list. This could mean switching to some dynamic technology (rails or nodejs probably) which would really slow down my project. I dont tweet that often so I just updated the todo list to:</p>
+
+<ul>
+<li>Take my last 3 tweets and include them manually in the html</li>
+<li>Add a link to twitter page</li>
+<li>Write/design the about page</li>
+<li>Write a first article: building this website</li>
+<li>Put the article in html</li>
+<li>Update home with a link to the article</li>
+<li>manual ssh upload of content</li>
+</ul>
+
+<p>Note that although I kept things simple by avoiding completely the twitter integration during the first batch, I also added the complexity of writing a first article which was not part of the initial todo list: I only realized this while writing this article.</p>
+
+<p>So I did write this article using Textastic on the iPad in markdown format, saved it to html and included it in my blank article page. I synced it with my computer using Dropbox, commited it in a private git repository, and pulled it on my free EC2 micro instance where I already had a virtual host for the domain.</p>
+
+
+    <!-- Footer -->
+    <hr class="sixteen columns" />
+    <div class="sixteen columns footer">
+      Copyright Thomas Sarlandie 2012<br/>
+      See <a href="/aboutme.html">About</a> page for more copyright information (CC by SA).
+    </div>
+  </div>
+</body>
+</html>
