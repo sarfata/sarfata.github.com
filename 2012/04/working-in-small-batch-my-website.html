@@ -8,7 +8,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Thomas scrapbook</title>
+	<title>Thomas scrapbook: Working in small batch: starting a website</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -33,6 +33,19 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-15404974-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
 </head>
 <body>
 	<div class="container">
@@ -42,32 +55,40 @@
   		</div>
       <div id="nav" class="two columns remove-bottom">
         <ul class="remove-bottom">
-          <li class="remove-bottom"><a href="/aboutme.html">About</a></li>
+          <li class="remove-bottom"><a href="../../about.html">About</a></li>
         </ul>
       </div>
     </div>
     <hr class="sixteen columns" style="margin-top: 2px;"/>
     <!-- End of header -->
     
+    <div class="sixteen columns">
+      <h3 id="working_in_small_batch_starting_a_website">Working in small batch: starting a website</h3>
+    </div>
+    
     <div class="nine columns">
 
-
-<h3 id="working_in_small_batch_starting_a_website">Working in small batch: starting a website</h3>
+<h4>Switching to small batch</h4>
 
 <p>I tend to have tons of great ideas of stuff to do, but quite sadly most of them just end up in a huge mental stack that never seems to go down. The more ideas I have, the more frustrated I get that nothing actually gets <em>done</em>.
-I do spend a lot of time on those ideas, mostly when they come up. The luckiest get my attention for a few day, but no matter how much time I spend, they never leave the state of great ideas that I just did not finish.</p>
+The luckiest ones get my attention for a few days, but no matter how much time I spend, they never leave the state of great ideas that I just did not finish.</p>
 
-<p>Those symptoms are not unlike the problems that a lot of companies face: they spend a lot of time working on new features, on a new process that will revolutionize how work is done but often nothing gets out of that work: no code is rolled in production or the slides end up in the trash of some executive that will never have time to approve them.
-When dealing with product, agile practices encourage small iteration and frequent releases. In a company, lean practices recommend working in very small batch that follow a complete design-develop-test cycle. It occured to me recently, that those principles could very well be applied to my own personal projects.</p>
+<p>Those symptoms are not unlike the problems that a lot of companies face: they spend a lot of time working on new features, on a new process that will revolutionize how work is done but often nothing gets out of that work: no code is rolled in production or the slides end up in the trash of an executive that will never have time to approve them.
+When dealing with products, agile practices encourage small iterations and frequent releases. In a company, lean practices recommend working in very small batch that follow a complete design-develop-test cycle. It occured to me recently, that those principles could very well be applied to my own personal projects: building this website for example.</p>
+
+<h4>Personal pages</h4>
 
 <p>I bought sarfata.org a long time ago and first uploaded a static html page that I updated when I had something to say. It was very basic: some &lt;p&gt; some &lt;hr&gt; and I had a perfectly fine website for the early 2000s. A few years ago, I upgraded this website to wordpress and hosted it on a rented server. I migrated my older posts from html to wordpress and posted a very few articles. This server hosted a few wordpress sites and unfortunately got hacked one day (the forensic analysis of this server is a story for another day). When I realized that the server was compromised, I backuped the content and turned it off. Since then, sarfata.org is just a blank page.</p>
 
-<p>Away on vacations, I started having more and more ideas of things to publish on my no-longer blog. My first project quickly became a new version of sarfata.org. This quickly became an exciting endeavour involving nodeJS, a git-based publication system and markdown for writing article (see joehewitt.org description of his new website for more ideas).
-One sometime has to stop his brain to limit the difference between ideas and actions. Thinking small batch and deciding to commit myself to work in short burst, each followed by an output has made a tremendous difference to how I looked at this project. It was no more about how many fun technologies I am going to learn on the way but rather how simple can I make it.</p>
+<h4>Task list</h4>
+
+<p>Away on vacations, I started having more and more ideas of things to publish on my no-longer blog. As I thought about a new version of this site, it quickly became an exciting project involving nodeJS, a git-based publication system and markdown for writing article (see <a href="">Joe Hewitt description of his new website</a> for more ideas).</p>
+
+<p>One sometime has to stop his brain to limit the difference between ideas and actions. Thinking small batch and deciding to commit myself to work in short burst, each followed by an output has made a tremendous difference to how I looked at this project. It was no more about how many fun technologies I am going to learn on the way but rather how simple I could make it.</p>
 
 <p>I have learnt that jumping right in a code editor (or photoshop for the more design-inspired) is never the correct way to start a project. Pen and paper are amazing tools whose power I am slowly starting to acknowledge. I made a list of the tasks needed to roll a first version of this website:</p>
 
-<ul>
+<ul class="square">
 <li>Storyboard the homepage</li>
 <li>Storyboard an article page</li>
 <li>Design the homepage and the article page in photoshop</li>
@@ -78,13 +99,19 @@ One sometime has to stop his brain to limit the difference between ideas and act
 
 <p>The incredible power of tasks list is that they allow you to realize that even the simplest thing like &#8220;building a homepage in static html&#8221; actually involves a lot more.</p>
 
+<h4>Design and implementation</h4>
+
+</div>
+
+<div class="nine columns">
+
 <p>I had bought Omnigrafle on my iPad a while ago and decided to give it a try for simple storyboarding. It turned out to be a great tool. I used the web browser from the recently included Konagi stencils to give perspective and constraints to my design, shared layers to reuse header and footer accross my two pages, and blocks of random text from the same stencils kit to simulate content. In about an hour, I had my two pages designed.</p>
 
 <p>The Omnigrafle result looked so good that I skipped the design phase (I would not have done much better in Photoshop anyways) and jumped to html. I had heard about grid css framework to quickly bootstrap a project and chose Skeleton (getskeleton.org) after a quick google search. I am kind of ashamed to say that it feels good to finally design again with tables in mind &#8230;</p>
 
 <p>I had to rework the todo list a little bit after that because my storyboard included my twitter feed which I had not thought about in my first list. This could mean switching to some dynamic technology (rails or nodejs probably) which would really slow down my project. I dont tweet that often so I just updated the todo list to:</p>
 
-<ul>
+<ul class="square">
 <li>Take my last 3 tweets and include them manually in the html</li>
 <li>Add a link to twitter page</li>
 <li>Write/design the about page</li>
@@ -96,14 +123,29 @@ One sometime has to stop his brain to limit the difference between ideas and act
 
 <p>Note that although I kept things simple by avoiding completely the twitter integration during the first batch, I also added the complexity of writing a first article which was not part of the initial todo list: I only realized this while writing this article.</p>
 
+</div>
+
+<div class="six columns offset-by-one">
+  <img class="side-image" src="../../img/omnigraffle.png" alt="Using Omnigraffle to design the website"/>
+</div>
+
+<div class="nine columns">
 <p>So I did write this article using Textastic on the iPad in markdown format, saved it to html and included it in my blank article page. I synced it with my computer using Dropbox, commited it in a private git repository, and pulled it on my free EC2 micro instance where I already had a virtual host for the domain.</p>
 
+<h4>Conclusion</h4>
+<p>Focusing on a small project with a simple outcome (have a website online) has helped me to avoid the usual trap of making things way more complicated than they need. It is a lot harder than it seems and I actually did a lot more than I had thought (Google Analytics, including images, resizing them, etc).</p>
+<p>To fully apply lean principles, it is important to understand how to measure the outcome of each batch so that I can focus the next ones on the tasks that bring the more value. Finding how to measure the value brought to me by those personal projects is a an interesting new problem ...</p>
+</div>
+
+<div class="six columns offset-by-one">
+  <img class="side-image" src="../../img/textastic.png" alt="Using Textastic to write this article in markdown format"/>
+</div>
 
     <!-- Footer -->
     <hr class="sixteen columns" />
     <div class="sixteen columns footer">
       Copyright Thomas Sarlandie 2012<br/>
-      See <a href="/aboutme.html">About</a> page for more copyright information (CC by SA).
+      See <a href="/about.html">About</a> page for more copyright information (CC by SA).
     </div>
   </div>
 </body>
