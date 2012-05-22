@@ -2,6 +2,7 @@ var http = require('http');
 var fs = require('fs');
 var util = require('util');
 var url = require('url');
+var path = require('path');
 
 var port = 80;
 
@@ -11,27 +12,27 @@ if (process.argv.length > 2) {
 
 http.createServer(function (req, res) {
   console.time('request');
-  var path = url.parse(req.url).path;
+  var reqPath = url.parse(req.url).path;
   
-  console.log("Requested path: %s", path);
+  console.log("Requested path: %s", reqPath);
   
-  if (path == "/") {
-    path = "/index.html";
+  if (reqPath == "/") {
+    reqPath = "/index.html";
   }
+  
+  reqPath = path.join(path.dirname(__filename), path.normalize(reqPath))
   
   var contentType = "html";
   
-  if (path.match(/.png$/)) {
+  if (path.extname(reqPath) == ".png") {
     contentType = "image/png";
   }
-  if (path.match(/.css$/)) {
+  if (path.extname(reqPath) == ".css") {
     contentType = "text/css";
   }
   
-  path = path.replace("/", "");
-  
-  console.log('Reading %s', path);
-  fs.readFile(path, function(err, data) {
+  console.log('Reading %s', reqPath);
+  fs.readFile(reqPath, function(err, data) {
     if (err) {
       res.writeHead(500);
       res.end(util.inspect(err));

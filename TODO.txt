@@ -16,6 +16,9 @@ Objective 1 - Reuse code between page
  + Serve static html of the homepage from a file on disk
  + Serve static html of an article page from a file on disk
  + Serve resources (img/js/css) from disk
- - Process includes in the pages while reading them from disk and/or serving them
- - Deploy nodejs on tsa3
- - Deploy the new nodejs website on tsa3
+ + Make sure that remote users can not browse the entire disk!
+  --> curl http://localhost:8080/../../.ssh/config ==> not good
+ + Process includes in the pages while reading them from disk and/or serving them
+ + Deploy nodejs on tsa3
+ + Deploy the new nodejs website on tsa3
+ 
