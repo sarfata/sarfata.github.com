@@ -42,11 +42,24 @@ h1 a {
   text-decoration: none;
 }
 
-.side-image {
-  margin-bottom: 50px;
-  max-width: 100%;
-  height: auto;
+/* In markdown, we want the list to be displayed with a margin and squares. */
+
+.markdown ul, ol {
+  margin-left: 30px;
 }
+
+.markdown ul {
+  list-style: square outside;
+}
+
+/* In markdown, we redefine the titles to be able to use h1->h3 */
+.markdown h1 { font-size: 28px; line-height: 34px; margin-bottom: 8px; }
+.markdown h2 { font-size: 21px; line-height: 30px; margin-bottom: 4px; }
+.markdown h3 { font-size: 17px; line-height: 24px; }
+.markdown h4 { font-size: 14px; line-height: 21px; }
+.markdown h5 { font-size: 14px; line-height: 21px; }
+.markdown h6 { font-size: 14px; line-height: 21px; }
+
 
 /* #Page Styles
 ================================================== */
@@ -55,6 +68,21 @@ h1 a {
 .social-links li {
   display: inline;
 }
+
+/* Article page (based on _template.html) */
+  /* When displaying articles, if screen is bigger than 960px, display images on the right side of text */
+@media only screen and (min-width: 960px) {
+  .article p {
+    width: 520px;
+    position: relative;
+  }
+
+  .article img {
+    position: absolute;
+    left: 600px;
+  }  
+}
+
 
 /* #Media Queries
 ================================================== */
