@@ -76,7 +76,10 @@ h1 a {
     width: 520px;
     position: relative;
   }
-
+  .article li {
+    width: 520px;
+  }
+  
   .article img {
     position: absolute;
     left: 600px;
