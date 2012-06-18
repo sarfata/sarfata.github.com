@@ -34,34 +34,34 @@ Building a website
 
 ![C-Light first website](/img/clight-web-v1.png)
 
-I used the same techniques that I did for [my-website][my own website] and put a [tbideas][webpage] up on which I described the product. To do that, I had to give it a name, choose the most important features, get rid of the others and do some copywriting to build the content.
+We used the same techniques that I had used for [my-website][my own website] and put a [tbideas][webpage] up on which we described the product. To do that, we had to give it a name, choose the most important features, get rid of the others and do some copywriting to build the content.
 
-In order to measure interest I added a Pre-Order button and a link to a Mailchimp form to subscribe to a mailing list. A few lines of Google Analytics JavaScript would let me know how many people came and where they came from.
+In order to measure interest we added a Pre-Order button and a link to a Mailchimp form to subscribe to a mailing list. A few lines of Google Analytics JavaScript would let us know how many people came and where they came from.
 
 Online marketing
 ----------------
 
-The final step was to bring visitors to my website. Google AdWords, Twitter and Facebook are all easy solutions when you want to build an audience. I used those three medias over the course of a few weeks and then gathered results.
+The final step was to bring visitors to our website. Google AdWords, Twitter and Facebook are all easy solutions when you want to build an audience. We used those three medias over the course of a few weeks and then gathered results.
 
 ### Adwords
 
 ![Evolution of the number of clicks and the cost per click](/img/adwords-evolution.png)
 
-I put up a few ad groups with about 50 keywords and set a budget of $10/day. My initial cost per click was around $2 but it quickly dropped below $1. This brought me a dozen visitors every day with the most successful keywords being things like "dinner light", "clap lamps" or "wifi lamp". My most succesful ad is "Romantic dinner light" with a click-through rate of 0.36% which still seems pretty low to me.
+We put up a few ad groups with about 50 keywords and set a budget of $10/day. Our initial cost per click was around $2 but it quickly dropped below $1. This brought a dozen visitors every day with the most successful keywords being things like "dinner light", "clap lamps" or "wifi lamp". Our most succesful ad is "Romantic dinner light" with a click-through rate of 0.36% which still seems pretty low to us. **Edit:** Experienced adwords user, tell us that we should aim for 0.8%.
 
-Overall, not one of the 145 visitors brought to me through adwords decided to fill-in his email address to receive more information about the product. So far the experiment cost me $124. Not a big success!
+Overall, not one of the 145 visitors brought to the site through adwords decided to fill-in his email address to receive more information about the product. So far the experiment cost $124. Not a big success!
 
 ### Twitter
 
 ![C-Light first tweet](/img/clight-tweet-1.png)
 
-A few days into the adwords campaign, I decided to let my twitter followers know about what I was working on and tweeted 
+A few days into the adwords campaign, we decided to let my twitter followers know about what we were working on and I tweeted:
 
 > This is what I have been working on for a few weeks. First prototypes available soon! C-Light: http://www.tbideas.com Feedbacks welcomed!
 
-Compared to adwords, the feedback was amazing. In a few hours, I got about a dozen people retweeting, replying or favoriting this tweet. According to Google Analytics, Twitter brought 28 visitors on the page. Not bad with my 288 followers! "This is nice", I thought but my metric was: how many people will actually give their email address? Only one did.
+Compared to adwords, the feedback was amazing. In a few hours, I got about a dozen people retweeting, replying or favoriting this tweet. According to Google Analytics, Twitter brought 28 visitors on the page. Not bad with my 288 followers! "This is nice", we thought but our metric was: how many people will actually give their email address? Only one did.
 
-At this point, I started re-thinking the webpage: it was probably too complicated for people to subscribe. I should have measured more precisely the different steps of subscription, but I had one last experiment to run before making changes.
+At this point, we started re-thinking the webpage: it was probably too complicated for people to subscribe. We should have measured more precisely the different steps of subscription, but we had one last experiment to run before making changes.
 
 ### Facebook
 
@@ -70,19 +70,19 @@ At this point, I started re-thinking the webpage: it was probably too complicate
 I simply posted an update on my wall, saying:
 > In case you missed it on Twitter, here is what I am working on right now. Let me know what you think! http://www.tbideas.com/
 
-Just like it did with Twitter, the feedback came right away: 8 likes, 6 replies. The traffic increase on the website was also significant. With only one post, I received 62 visits on the site. Quite good for my facebook account and my 293 friends. But there again, only one subscription to my mailing list.
+Just like it did with Twitter, the feedback came right away: 8 likes, 6 replies. The traffic increase on the website was also significant. With only one facebook post, we received 62 visits on the site. Quite good for my facebook account and my 293 friends. But there again, only one subscription to our mailing list.
 
 Conclusion
 ----------
 
 This was the first step of an experiment. An experiment to understand whether people would be ready or not to buy a "smart lamp", but also an experiment to understand how to bring people to a product website and understand their behaviour.
 
-This has taught me a few things:
+This has taught us a few things:
 
 1. Throwing money on google analytics is not the best way to bring traffic to your website. It's expensive and the traffic is not that well qualified.
-1. It is extremely important to precisely measure what people do on your website and where they come from. I missed some important metrics (like how many people just clicked on pre-order) and of course there is no way to make up that data once it's gone...
-1. Social networks are an extremely efficient way to bring people to your website. Take care of your "friends" because if you want to run experiments like I did, they will be a very precious assets!
+1. It is extremely important to precisely measure what people do on your website and where they come from. We missed some important metrics (like how many people just clicked on pre-order) and of course there is no way to make up that data once it's gone...
+1. Social networks are an extremely efficient way to bring people to your website. Take care of your "friends" because if you want to run experiments like we did, they will be a very precious assets!
 
-So far, the experiment has not really helped to grow the idea. The feedback was too limited and not qualitative. But the lessons learnt are very important and will help me make sure that as the idea matures thanks to prototyping, the website is ready to present it and then gather feedback.
+So far, the experiment has not really helped to grow the idea. The feedback was too limited and not qualitative. But the lessons learnt are very important and will help us make sure that as the idea matures thanks to prototyping, the website is ready to present it and then gather feedback.
 
 
