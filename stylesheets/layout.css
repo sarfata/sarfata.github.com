@@ -66,6 +66,10 @@ h1 a {
   white-space: pre-wrap;
 }
 
+.markdown code {
+  font-family: Courier;
+}
+
 
 /* #Page Styles
 ================================================== */
