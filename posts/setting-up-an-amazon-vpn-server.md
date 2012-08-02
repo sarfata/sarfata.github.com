@@ -11,6 +11,8 @@ Amazon lets you use a [free instance][amazonfree] for a year that will be perfec
 
 This post is a followup to a [first post][firewall-article] in which I introduced the [Voodoo Privacy project][github] and explained how to completely lock down your computer from external access (but also how to prevent your computer from talking too much).
 
+We will see how to see an IPSec / L2TP VPN. They are very secure, and very easy to configure on the client side, supported by most operating systems without any extra tools to download or install.
+
 ## Alternatives
 
 If you dont want to go through the trouble of setting up an EC2 box, you can buy a VPN from a provider such as [Black VPN][blackvpn] which will give you a VPN into a country of your choice for only 49€ per year. I think it's a pretty good deal (and they also have a full privacy package which also gives you access to all of their VPN servers including Lithuania, Russia, etc should you have a need for that).
@@ -80,7 +82,7 @@ On your mac, look at `/var/log/ppp.log`, this is what a normal connection looks 
     Wed Aug  1 15:49:07 2012 : L2TP clearing port-mapping for en1
 
 
-SSH to your amazon box and look at `/var/log/auth.log`, this is what a normal connection should look like:
+SSH to your amazon box and look at `/var/log/auth.log` and `/var/log/syslog`, this is what a normal connection should look like:
 
     $ ssh ubuntu@<AMAZON_PUBLIC_IP>
     $ tail -f /var/log/auth.log /var/log/syslog
