@@ -60,6 +60,12 @@ h1 a {
 .markdown h5 { font-size: 14px; line-height: 21px; }
 .markdown h6 { font-size: 14px; line-height: 21px; }
 
+.markdown pre {
+  font-family: Courier;
+  width: 100%;
+  white-space: pre-wrap;
+}
+
 
 /* #Page Styles
 ================================================== */
