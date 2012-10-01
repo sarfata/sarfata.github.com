@@ -26,7 +26,7 @@ I am going to assume that you already have an amazon EC2 account and SSH keys se
 
 ![Setup your security group](/img/vpn-security-group.png)
 
-Create a new security group (EC2 Management interface -> Security groups) and allow traffic to TCP port 500, and UDP ports 450 and 4500. Also add a rule to allow SSH. I like to limit SSH login from my home/office IP but if you are really brave you can let everyone find your SSH.
+Create a new security group (EC2 Management interface -> Security groups) and allow traffic to TCP port 500, and UDP ports 500 and 4500. Also add a rule to allow SSH. I like to limit SSH login from my home/office IP but if you are really brave you can let everyone find your SSH.
 
 ## Start a new Ubuntu server
 
