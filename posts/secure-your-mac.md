@@ -94,7 +94,7 @@ The other one is the actual rules that will be loaded ([get the latest version o
     # 
     # Firewall rules. Use with voodoo-safe.sh
     #
-    # http://www.sarfata.org/posts/setting-up-an-amazon-vpn-server.html
+    # http://www.sarfata.org/posts/setting-up-an-amazon-vpn-server.md
     #
     # Copyright Thomas Sarlandie 2012
     #
