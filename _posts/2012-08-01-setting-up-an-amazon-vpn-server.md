@@ -67,7 +67,7 @@ I have done my best to simplify the steps and make it easy to reproduce. If it d
 
 On your mac, look at `/var/log/ppp.log`, this is what a normal connection looks like: 
 
-{% highlight %}
+{% highlight bash %}
 $ tail -f /var/log/ppp.log
 Wed Aug  1 15:48:57 2012 : L2TP connecting to server '<AMAZON_PUBLIC_IP>' (<AMAZON_PUBLIC_IP>)...
 Wed Aug  1 15:48:57 2012 : IPSec connection started
@@ -93,7 +93,7 @@ Wed Aug  1 15:49:07 2012 : L2TP clearing port-mapping for en1
 
 SSH to your amazon box and look at `/var/log/auth.log` and `/var/log/syslog`, this is what a normal connection should look like:
 
-{% highlight %}
+{% highlight bash %}
 $ ssh ubuntu@<AMAZON_PUBLIC_IP>
 $ tail -f /var/log/auth.log /var/log/syslog
 ==> /var/log/auth.log <==
