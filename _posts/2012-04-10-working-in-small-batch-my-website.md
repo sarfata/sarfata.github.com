@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /posts/working-in-small-batch-my-website.md
 excerpt: |
   # Working in small batch: starting a website
   

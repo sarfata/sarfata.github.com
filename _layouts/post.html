@@ -8,7 +8,9 @@ layout: default
   <div id="disqus_thread"></div>
   <script type="text/javascript">
       var disqus_shortname = 'sarfataorg';
-
+      {% if page.permalink %}
+      var disqus_url = "{{ site.production_url }}{{ page.permalink }}";
+      {% endif %}
       /* * * DON'T EDIT BELOW THIS LINE * * */
       (function() {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

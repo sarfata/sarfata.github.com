@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /posts/secure-your-mac.md
 excerpt: |
   # How to secure your Mac when using it on wireless networks
 

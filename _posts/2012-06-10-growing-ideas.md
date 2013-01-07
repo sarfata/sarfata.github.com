@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /posts/growing-ideas.md
 excerpt: |
   Growing ideas
   =============
