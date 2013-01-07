@@ -1,3 +1,22 @@
+---
+layout: post
+excerpt: |
+  Growing ideas
+  =============
+  
+  Trees, houses and bushes were passing by as our tuk-tuk pulled by a small motorcycle rushed down the unpaved street of Cambodia. I had only been gone for a few weeks but already my mind was rushing to find a new project to work on. This is when it happened.
+  
+  How the idea came up is probably not that important. It was probably something that had been running unnoticed in my mind. The peace of the moment gave it an opportunity to materialize in my head. What does matter is: How could I find out whether this was *the* idea? 
+
+  One thing I have learnt working with creative people is that a good idea does not just show up. It takes time, it takes energy, you need to work at it. And slowly, as you go, the idea matures, transforms and becomes way more than the initial grain of sand.
+
+  What I am really working on is growing ideas. And after having watched the [video][leanstartupvideo] and read [the book][leanstartupbook], I knew exactly what to do with this idea: Build a [Minimum-Viable-Product][mvp] and get feedback. This is the story of the first iteration on a product called C-Light, a connected lamp, my contribution to the Internet of Things.
+  
+  [leanstartupbook]: http://theleanstartup.com/book
+  [leanstartupvideo]: http://www.youtube.com/watch?v=i65PaoTlVKg&feature=youtu.be
+  [mvp]: http://en.wikipedia.org/wiki/Minimum_viable_product
+  
+---
 Growing ideas
 =============
 
@@ -8,15 +27,6 @@ How the idea came up is probably not that important. It was probably something t
 One thing I have learnt working with creative people is that a good idea does not just show up. It takes time, it takes energy, you need to work at it. And slowly, as you go, the idea matures, transforms and becomes way more than the initial grain of sand.
 
 What I am really working on is growing ideas. And after having watched the [video][leanstartupvideo] and read [the book][leanstartupbook], I knew exactly what to do with this idea: Build a [Minimum-Viable-Product][mvp] and get feedback. This is the story of the first iteration on a product called C-Light, a connected lamp, my contribution to the Internet of Things.
-
-[leanstartupbook]: http://theleanstartup.com/book
-[leanstartupvideo]: http://www.youtube.com/watch?v=i65PaoTlVKg&feature=youtu.be
-[mvp]: http://en.wikipedia.org/wiki/Minimum_viable_product
-[nest]: http://www.nest.com/
-[my-website]: working-in-small-batch-my-website.md
-[tbideas]: http://www.tbideas.com/
-
-<!readmore/>
 
 First step: a prototype?
 ------------------------
@@ -34,7 +44,7 @@ Building a website
 
 ![C-Light first website](/img/clight-web-v1.png)
 
-We used the same techniques that I had used for [my-website][my own website] and put a [tbideas][webpage] up on which we described the product. To do that, we had to give it a name, choose the most important features, get rid of the others and do some copywriting to build the content.
+We used the same techniques that I had used for [my own website][my-website] and put a [webpage][tbideas] up on which we described the product. To do that, we had to give it a name, choose the most important features, get rid of the others and do some copywriting to build the content.
 
 In order to measure interest we added a Pre-Order button and a link to a Mailchimp form to subscribe to a mailing list. A few lines of Google Analytics JavaScript would let us know how many people came and where they came from.
 
@@ -85,4 +95,10 @@ This has taught us a few things:
 
 So far, the experiment has not really helped to grow the idea. The feedback was too limited and not qualitative. But the lessons learnt are very important and will help us make sure that as the idea matures thanks to prototyping, the website is ready to present it and then gather feedback.
 
+[leanstartupbook]: http://theleanstartup.com/book
+[leanstartupvideo]: http://www.youtube.com/watch?v=i65PaoTlVKg&feature=youtu.be
+[mvp]: http://en.wikipedia.org/wiki/Minimum_viable_product
+[nest]: http://www.nest.com/
+[my-website]: working-in-small-batch-my-website.md
+[tbideas]: http://www.tbideas.com/
 

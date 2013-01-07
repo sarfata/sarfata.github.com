@@ -1,5 +1,18 @@
+---
+layout: post
+excerpt: |
+  # Working in small batch: starting a website
+  
+  I tend to have tons of great ideas of stuff to do, but quite sadly most of them just end up in a huge mental stack that never seems to go down. The more ideas I have, the more frustrated I get that nothing actually gets *done*.
+  The luckiest ones get my attention for a few days, but no matter how much time I spend, they never leave the state of great ideas that I just did not finish.
+  
+  Those symptoms are not unlike the problems that a lot of companies face: they spend a lot of time working on new features, on a new process that will revolutionize how work is done but often nothing gets out of that work: no code is rolled in production or the slides end up in the trash of an executive that will never have time to approve them.
+  When dealing with products, agile practices encourage small iterations and frequent releases. In a company, lean practices recommend working in very small batch that follow a complete design-develop-test cycle. It occured to me recently, that those principles could very well be applied to my own personal projects: building this website for example.
+  
+---
+
 # Working in small batch: starting a website
-    
+		
 ## Switching to small batch
 
 I tend to have tons of great ideas of stuff to do, but quite sadly most of them just end up in a huge mental stack that never seems to go down. The more ideas I have, the more frustrated I get that nothing actually gets *done*.
@@ -7,8 +20,6 @@ The luckiest ones get my attention for a few days, but no matter how much time I
 
 Those symptoms are not unlike the problems that a lot of companies face: they spend a lot of time working on new features, on a new process that will revolutionize how work is done but often nothing gets out of that work: no code is rolled in production or the slides end up in the trash of an executive that will never have time to approve them.
 When dealing with products, agile practices encourage small iterations and frequent releases. In a company, lean practices recommend working in very small batch that follow a complete design-develop-test cycle. It occured to me recently, that those principles could very well be applied to my own personal projects: building this website for example.
-
-<!readmore/>
 
 ## Personal pages
 

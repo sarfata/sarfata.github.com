@@ -1,13 +1,19 @@
+---
+layout: post
+excerpt: |
+  # Setup your very own VPN server with Amazon EC2
+  
+  Setting up a VPN server with Amazon EC2 is a great way to protect your privacy. You can turn the server on when you need it, shut it down when you dont. All your traffic will go through your VPN and go out on the internet from your EC2 box so that you are in a really secure environment.
+  
+  Amazon lets you use a [free instance][amazonfree] for a year that will be perfect for our purpose. And with the help of this post, it should not take more that 5 minutes!
+  
+  [amazonfree]: https://aws.amazon.com/free/
+---
 # Setup your very own VPN server with Amazon EC2
 
 Setting up a VPN server with Amazon EC2 is a great way to protect your privacy. You can turn the server on when you need it, shut it down when you dont. All your traffic will go through your VPN and go out on the internet from your EC2 box so that you are in a really secure environment.
 
 Amazon lets you use a [free instance][amazonfree] for a year that will be perfect for our purpose. And with the help of this post, it should not take more that 5 minutes!
-
-[blackvpn]: https://www.blackvpn.com
-[amazonfree]: https://aws.amazon.com/free/
-
-<!readmore/>
 
 This post is a followup to a [first post][firewall-article] in which I introduced the [Voodoo Privacy project][github] and explained how to completely lock down your computer from external access (but also how to prevent your computer from talking too much).
 
@@ -143,8 +149,8 @@ Remember, there are three _steps_ to the connection:
 
 If it still does not work, please post in the comment below and let me know what step you have reached. I will do my best to help! If it works, please do also post in the comment below. I would love to know that I have helped someone with this.
 
-
-
+[blackvpn]: https://www.blackvpn.com
+[amazonfree]: https://aws.amazon.com/free/
 [github]: https://github.com/sarfata/voodooprivacy
 [github-voodoovpn]: https://github.com/sarfata/voodooprivacy/blob/master/voodoo-vpn.sh
 [firewall-article]: /posts/secure-your-mac.md

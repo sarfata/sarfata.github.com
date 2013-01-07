@@ -1,3 +1,25 @@
+---
+layout: post
+excerpt: |
+  CTO 101: Source code management
+  ===============================
+  
+  ## About CTO101
+
+  CTO101 is a series of guidelines for entrepreneurs who have great ideas but have not found yet the CTO that will help their company grow. It is all about giving you the tools you need to work effectively with freelance developers, hosters and 3rd party tools.
+  
+  ## What is SCM?
+
+  Source Code Management (or SCM) is the combination of a processes and tools that allow a company to effectively manage the source code for different projects.
+  
+  In a nutshell, SCM allows you to
+
+  *  Share source code between developers and let several developers work on the same projects at the same time;
+  *  Protect your source code by keeping a complete history of all files and very frequent backups;
+  *  Track versions so that you can work on a new version of an application, and still keep the current version source code to write and publish bugfixes.
+  
+---
+
 CTO 101: Source code management
 ===============================
 
@@ -16,8 +38,6 @@ In a nutshell, SCM allows you to:
 *  Share source code between developers and let several developers work on the same projects at the same time;
 *  Protect your source code by keeping a complete history of all files and very frequent backups;
 *  Track versions so that you can work on a new version of an application, and still keep the current version source code to write and publish bugfixes.
-
-<!readmore/>
 
 Why do you need SCM when you don't have developers?
 ---------------------------------------------------
