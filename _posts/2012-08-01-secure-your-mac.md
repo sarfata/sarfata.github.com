@@ -58,110 +58,113 @@ What [Voodoo Privacy][github] does is that when you want to go into a full secur
 
 You only need two files (which are available from my [github]), the first one is a shell script to enable the custom rules:
 
-    #!/bin/sh
-    #
-    # http://www.sarfata.org/posts/secure-your-mac.html
-    #
-    # Copyright Thomas Sarlandie 2012
-    #
-    # This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 
-    # Unported License: http://creativecommons.org/licenses/by-sa/3.0/
-    #
-    # Attribution required: please include my name in any published derivative and
-    # let me know how you have improved it! 
+{% highlight bash %}
+#!/bin/sh
+#
+# http://www.sarfata.org/posts/secure-your-mac.html
+#
+# Copyright Thomas Sarlandie 2012
+#
+# This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 
+# Unported License: http://creativecommons.org/licenses/by-sa/3.0/
+#
+# Attribution required: please include my name in any published derivative and
+# let me know how you have improved it! 
 
-    COMMAND="$1"
-    shift
+COMMAND="$1"
+shift
 
-    case $COMMAND in
-    hostile)
-      echo "Going into hostile mode. You will be protected."
-      # Load pf rules from custom file - Skip Apple default stuff
-      pfctl -f voodoo-pf.conf
-      # Enable packet filtering
-      pfctl -e
-      ;;
-    safe)
-      echo "Going back to Apple default mode"
-      pfctl -f /etc/pf.conf
-      pfctl -d
-      # note: it would be better to use pfctl -X <token> but getting the token 
-      # requires parsing the output of 'pfctl -s References'
-      ;;
-    log)
-      ifconfig pflog0 create
-      tcpdump -v -n -e -ttt -i pflog0
-      ;;
-    *)
-      echo "$0: <hostile|safe|log>"
-      echo " Use hostile when you are on an unsecured network."
-      echo " Use safe when you are back on a safe network. This will reset everything back to Apple's default"
-      ;;
-    esac
+case $COMMAND in
+hostile)
+  echo "Going into hostile mode. You will be protected."
+  # Load pf rules from custom file - Skip Apple default stuff
+  pfctl -f voodoo-pf.conf
+  # Enable packet filtering
+  pfctl -e
+  ;;
+safe)
+  echo "Going back to Apple default mode"
+  pfctl -f /etc/pf.conf
+  pfctl -d
+  # note: it would be better to use pfctl -X <token> but getting the token 
+  # requires parsing the output of 'pfctl -s References'
+  ;;
+log)
+  ifconfig pflog0 create
+  tcpdump -v -n -e -ttt -i pflog0
+  ;;
+*)
+  echo "$0: <hostile|safe|log>"
+  echo " Use hostile when you are on an unsecured network."
+  echo " Use safe when you are back on a safe network. This will reset everything back to Apple's default"
+  ;;
+esac
+{% endhighlight %}
 
 
 The other one is the actual rules that will be loaded ([get the latest version on github][github-voodoopf]):
 
+{% highlight bash %}
+# voodoo-pf.conf
+# 
+# Firewall rules. Use with voodoo-safe.sh
+#
+# http://www.sarfata.org/posts/setting-up-an-amazon-vpn-server.md
+#
+# Copyright Thomas Sarlandie 2012
+#
+# This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 
+# Unported License: http://creativecommons.org/licenses/by-sa/3.0/
+#
+# Attribution required: please include my name in any derivative and let me
+# know how you have improved it! 
 
-    # voodoo-pf.conf
-    # 
-    # Firewall rules. Use with voodoo-safe.sh
-    #
-    # http://www.sarfata.org/posts/setting-up-an-amazon-vpn-server.md
-    #
-    # Copyright Thomas Sarlandie 2012
-    #
-    # This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 
-    # Unported License: http://creativecommons.org/licenses/by-sa/3.0/
-    #
-    # Attribution required: please include my name in any derivative and let me
-    # know how you have improved it! 
+# The interface that you will use to connect to an unsecure network
+ext_if = "en1"
+# your VPN server (if you intend to use one)
+ipsec_server = "42.42.42.42"
 
-    # The interface that you will use to connect to an unsecure network
-    ext_if = "en1"
-    # your VPN server (if you intend to use one)
-    ipsec_server = "42.42.42.42"
+# drop everything by default
+set block-policy drop
+# we do not want to filter traffic on "internal" interfaces
+set skip on lo0
+set skip on vmnet1
+set skip on vmnet8
+set skip on vboxnet0
 
-    # drop everything by default
-    set block-policy drop
-    # we do not want to filter traffic on "internal" interfaces
-    set skip on lo0
-    set skip on vmnet1
-    set skip on vmnet8
-    set skip on vboxnet0
+# Normalize all incoming traffic
+scrub in on $ext_if all fragment reassemble
 
-    # Normalize all incoming traffic
-    scrub in on $ext_if all fragment reassemble
+# Block and log everything by default - Use pf-lockdown.sh log to see the logs
+block drop log all
 
-    # Block and log everything by default - Use pf-lockdown.sh log to see the logs
-    block drop log all
+# Block silently some traffic - otherwise the logs get very clogged up
+# I have disabled those lines to let you see the logs and realize all the stuff your
+# computer shares...
+#block on $ext_if proto udp from any port 5353 to any port 5353
+#block out inet6
+#block out on $ext_if proto udp from any to port 137
 
-    # Block silently some traffic - otherwise the logs get very clogged up
-    # I have disabled those lines to let you see the logs and realize all the stuff your
-    # computer shares...
-    #block on $ext_if proto udp from any port 5353 to any port 5353
-    #block out inet6
-    #block out on $ext_if proto udp from any to port 137
+# Allow ipsec traffic
+pass out on $ext_if proto tcp from any to $ipsec_server port 500
+pass out on $ext_if proto udp from any to $ipsec_server port 500
+pass out on $ext_if proto udp from any to $ipsec_server port 4500
+pass out on $ext_if proto tcp from any to $ipsec_server port 1701
+pass out on $ext_if proto udp from any to $ipsec_server port 1701
 
-    # Allow ipsec traffic
-    pass out on $ext_if proto tcp from any to $ipsec_server port 500
-    pass out on $ext_if proto udp from any to $ipsec_server port 500
-    pass out on $ext_if proto udp from any to $ipsec_server port 4500
-    pass out on $ext_if proto tcp from any to $ipsec_server port 1701
-    pass out on $ext_if proto udp from any to $ipsec_server port 1701
+# Allow dhcp traffic
+pass in on $ext_if proto udp from port 68 to any port 67
+pass in on $ext_if proto udp from port 67 to any port 68
+pass out on $ext_if proto udp from port 67 to any port 68
 
-    # Allow dhcp traffic
-    pass in on $ext_if proto udp from port 68 to any port 67
-    pass in on $ext_if proto udp from port 67 to any port 68
-    pass out on $ext_if proto udp from port 67 to any port 68
+# Allow ping to test connection
+pass out on $ext_if inet proto icmp all icmp-type echoreq
+# Allow ssh out
+pass out on $ext_if inet proto tcp to port 22
 
-    # Allow ping to test connection
-    pass out on $ext_if inet proto icmp all icmp-type echoreq
-    # Allow ssh out
-    pass out on $ext_if inet proto tcp to port 22
-
-    # Allow all on vpn
-    pass out on ppp0
+# Allow all on vpn
+pass out on ppp0
+{% endhighlight %}
 
 
 Copy and paste those lines or (clone my github on your computer), and execute `.sudo /voodoo.sh hostile` to disable OSX default firewall and enable these very basic (and much more strict) rules. Then run `sudo ./voodoo.sh log` to see all the traffic that is being dropped. By default, DNS, HTTP and HTTPS are not allowed so you really wont do much.
