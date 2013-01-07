@@ -6,30 +6,22 @@ tagline: Supporting tagline
 
 {% assign myposts = site.posts %}
 
+<div class="eleven columns">
 {% for post in site.posts %}
 	{% if forloop.first %}
-		<div class="eleven columns">
+		<div class="eleven columns" style="margin-bottom: 20px;">
 		  <div class="markdown">
 				{% if post.excerpt %}
 					{{ post.excerpt |markdownify }}
 				{% else %}
 					{{ post.content }}
 				{% endif %}
+  		  <a href="{{ BASE_PATH }}{{ post.url }}">Read more</a>
 		  </div>
-		  <a href="{{ BASE_PATH }}{{ post.url }}">Read more</a>
 		</div>
 
-		<div class="four columns offset-by-one">
-		  <h4><a href="https://twitter.com/sarfata" class="text-like-link">@sarfata</a></h4>
-		  <p><em>Best school canteen ever - Amok (fish) for lunch with ananas&cucumber <a href="http://instagr.am/p/IviooaTNzT/">instagr.am/p/IviooaTNzT/</a></em> - 29 Mar</p>
-		  <p><em>Quick stop on the way to fix a flat tire. <a href="http://instagr.am/p/ItjmcfzN-h/">instagr.am/p/ItjmcfzN-h/</a></em> - 28 Mar</p>
-		  <p><em>Biking back from work ... <a href="http://t.co/v65MWtH2">instagr.am/p/ItjaftTN-f/</a></em> - 28 Mar</p>
-		  <p><em>If you're not busy being born, you're busy dying!</em> - 10 Mar</p>
-		  <a href="https://twitter.com/sarfata" class="twitter-follow-button" data-show-count="false">Follow @sarfata</a>
-		  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		</div>
 	{% else %}
-		<div class="eight columns">
+		<div class="five columns" style="margin-bottom: 20px;">
 		  <div class="markdown">
 				{% if post.excerpt %}
 					{{ post.excerpt |markdownify }}
@@ -41,3 +33,9 @@ tagline: Supporting tagline
 		</div>
 	{% endif %}
 {% endfor %}
+</div>
+
+<div class="three columns offset-by-one">
+  <a class="twitter-timeline" href="https://twitter.com/sarfata" data-widget-id="288348363034861568">Tweets by @sarfata</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
