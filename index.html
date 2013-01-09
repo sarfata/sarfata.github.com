@@ -7,11 +7,8 @@ layout: page
 	{% if forloop.first %}
 		<div class="eleven columns" style="margin-bottom: 20px;">
 		  <div class="markdown">
-				{% if post.excerpt %}
-					{{ post.excerpt |markdownify }}
-				{% else %}
-					{{ post.content }}
-				{% endif %}
+		    {{ post.content | split:"<!-- more -->" | first }}
+
   		  <a href="{{ BASE_PATH }}{{ post.url }}">Read more</a>
 		  </div>
 		</div>

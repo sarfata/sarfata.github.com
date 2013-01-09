@@ -16,6 +16,8 @@ Setting up a VPN server with Amazon EC2 is a great way to protect your privacy. 
 
 Amazon lets you use a [free instance][amazonfree] for a year that will be perfect for our purpose. And with the help of this post, it should not take more that 5 minutes!
 
+<!-- more -->
+
 This post is a followup to a [first post][firewall-article] in which I introduced the [Voodoo Privacy project][github] and explained how to completely lock down your computer from external access (but also how to prevent your computer from talking too much).
 
 We will see how to see an IPSec / L2TP VPN. They are very secure, and very easy to configure on the client side, supported by most operating systems without any extra tools to download or install.
