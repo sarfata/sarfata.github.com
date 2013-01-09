@@ -1,22 +1,6 @@
 ---
 layout: post
 permalink: /posts/secure-your-mac.md
-excerpt: |
-  # How to secure your Mac when using it on wireless networks
-
-  I recently attended the [Defcon] conference which is well know to be the [most hostile network in the world][defcon-hostile]. One common advice is to [hide all your devices][hide-your-devices].
-
-  Of course, you know I could not spend a week without the Internet, so I finally looked into securing my computer which I should have done a long time ago. In this post, I want to share some recommandations on how to really secure your mac computer and protect your privacy when surfing online.
-
-  We will go through setting up the MacOS firewall and a VPN to an amazon EC2 box. This is still quite technical so if you have never opened a terminal this is probably not for you might still want to read the next paragraph to understand the risks and have some basic ideas of how to protect yourself.
-
-  Every script described here is published on my github as the [Voodoo Privacy][github] project.
-
-  [Defcon]: https://www.defcon.org/
-  [defcon-hostile]: http://edition.cnn.com/2011/TECH/web/08/05/def.con.hackers/index.html
-  [hide-your-devices]: http://www.thetechscoop.net/2011/08/11/def-con-19/
-  [github]: https://github.com/sarfata/voodooprivacy
-  
 ---
 # How to secure your Mac when using it on wireless networks
 
@@ -27,6 +11,8 @@ Of course, you know I could not spend a week without the Internet, so I finally 
 We will go through setting up the MacOS firewall and a VPN to an amazon EC2 box. This is still quite technical so if you have never opened a terminal this is probably not for you might still want to read the next paragraph to understand the risks and have some basic ideas of how to protect yourself.
 
 Every script described here is published on my github as the [Voodoo Privacy][github] project.
+
+<!-- more -->
 
 ## The risks of public wireless networks and some basic recommandations
 

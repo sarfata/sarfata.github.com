@@ -1,22 +1,6 @@
 ---
 layout: post
 permalink: /posts/growing-ideas.md
-excerpt: |
-  Growing ideas
-  =============
-  
-  Trees, houses and bushes were passing by as our tuk-tuk pulled by a small motorcycle rushed down the unpaved street of Cambodia. I had only been gone for a few weeks but already my mind was rushing to find a new project to work on. This is when it happened.
-  
-  How the idea came up is probably not that important. It was probably something that had been running unnoticed in my mind. The peace of the moment gave it an opportunity to materialize in my head. What does matter is: How could I find out whether this was *the* idea? 
-
-  One thing I have learnt working with creative people is that a good idea does not just show up. It takes time, it takes energy, you need to work at it. And slowly, as you go, the idea matures, transforms and becomes way more than the initial grain of sand.
-
-  What I am really working on is growing ideas. And after having watched the [video][leanstartupvideo] and read [the book][leanstartupbook], I knew exactly what to do with this idea: Build a [Minimum-Viable-Product][mvp] and get feedback. This is the story of the first iteration on a product called C-Light, a connected lamp, my contribution to the Internet of Things.
-  
-  [leanstartupbook]: http://theleanstartup.com/book
-  [leanstartupvideo]: http://www.youtube.com/watch?v=i65PaoTlVKg&feature=youtu.be
-  [mvp]: http://en.wikipedia.org/wiki/Minimum_viable_product
-  
 ---
 Growing ideas
 =============
@@ -28,6 +12,8 @@ How the idea came up is probably not that important. It was probably something t
 One thing I have learnt working with creative people is that a good idea does not just show up. It takes time, it takes energy, you need to work at it. And slowly, as you go, the idea matures, transforms and becomes way more than the initial grain of sand.
 
 What I am really working on is growing ideas. And after having watched the [video][leanstartupvideo] and read [the book][leanstartupbook], I knew exactly what to do with this idea: Build a [Minimum-Viable-Product][mvp] and get feedback. This is the story of the first iteration on a product called C-Light, a connected lamp, my contribution to the Internet of Things.
+
+<!-- more -->
 
 First step: a prototype?
 ------------------------

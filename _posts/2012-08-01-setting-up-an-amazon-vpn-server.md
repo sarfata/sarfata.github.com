@@ -1,14 +1,6 @@
 ---
 layout: post
 permalink: /posts/setting-up-an-amazon-vpn-server.md
-excerpt: |
-  # Setup your very own VPN server with Amazon EC2
-  
-  Setting up a VPN server with Amazon EC2 is a great way to protect your privacy. You can turn the server on when you need it, shut it down when you dont. All your traffic will go through your VPN and go out on the internet from your EC2 box so that you are in a really secure environment.
-  
-  Amazon lets you use a [free instance][amazonfree] for a year that will be perfect for our purpose. And with the help of this post, it should not take more that 5 minutes!
-  
-  [amazonfree]: https://aws.amazon.com/free/
 ---
 # Setup your very own VPN server with Amazon EC2
 

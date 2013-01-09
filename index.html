@@ -8,21 +8,20 @@ layout: page
 		<div class="eleven columns" style="margin-bottom: 20px;">
 		  <div class="markdown">
 		    {{ post.content | split:"<!-- more -->" | first }}
-
-  		  <a href="{{ BASE_PATH }}{{ post.url }}">Read more</a>
+		    {% if post.content contains "<!-- more -->" %}
+  		    <a href="{{ BASE_PATH }}{{ post.url }}">Read more</a>
+  		  {% endif %}
 		  </div>
 		</div>
 
 	{% else %}
 		<div class="five columns" style="margin-bottom: 20px;">
 		  <div class="markdown">
-				{% if post.excerpt %}
-					{{ post.excerpt |markdownify }}
-				{% else %}
-					{{ post.content }}
-				{% endif %}
+		    {{ post.content | split:"<!-- more -->" | first }}
 		  </div>
-		  <a href="{{ BASE_PATH }}{{ post.url }}">Read more</a>
+	    {% if post.content contains "<!-- more -->" %}
+		    <a href="{{ BASE_PATH }}{{ post.url }}">Read more</a>
+		  {% endif %}
 		</div>
 	{% endif %}
 {% endfor %}
