@@ -20,10 +20,13 @@ La communauté internationale aurait certainement dû intervenir plus tôt et il
 Bouleversé par les nouvelles de la guerre hier, j'ai écrit à notre guide. Voici sa réponse.
 
 > Bonjour thomas, ma famille et moi se portent bien pour le moment .
+> 
 > Il ya une semaine passée la population de sevarré et mopti etaient paniqué et inquièt . Car les islamistes etaient seulement à 70km de mopti, et ils voulaient Mopti.
+> 
 > Heureusement l'arlmée française est arrivé en urgence pour stopé leur avancé. Donc la ville qu'ils avaient occupé etait Konna, beaucoup de civils etaient noyé dans l'eau en fuiyant la guerre. Il ya eu vraiment trop de morts dans cette ville.
 > 
 > Malgré l'arrivé de la france nous sommes toujours inquiét car notre vie a carement changé. Nous ne sommes pas libre.
+>
 > Nous sommes en joie en ce dernioer temps parce que la population malienne crie et remercie la france et Fraçois hollande sa decision ferme sur l'intervention au mali. Les gens circulent avec les drapeaux français sur leurs motos et vehicules partout. Car sans l'armée française le mali n'existe plus et nous serrons soumis a des amputations et autres.
 > 
 > Ce qui s'est passée à konna si c'etait à mopti se sera pire car mopti est entouré d'eau et beaucoup de gens vont aussi se noyer dans l'eau.
