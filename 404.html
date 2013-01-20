@@ -54,10 +54,7 @@
 		        myref = "noreferrer";
 		}
 
-		_gaq.push(['_trackPageLoadTime']);
 		_gaq.push(['_trackPageview', "/404/" + myloc.replace(/\//g, "_") + "/" + myref.replace(/https*:\/\//i, "").replace(/\//g, "_")]);
-
-    _gaq.push(['_trackPageview']);
 
     (function() {
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
