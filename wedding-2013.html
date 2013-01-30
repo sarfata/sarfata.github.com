@@ -1,0 +1,144 @@
+---
+layout: default
+googlemaps: weddingMap
+---
+<div class="sixteen columns" style="min-height:400px;">
+  <div class="twelve columns">
+    <div id="weddingsMap" style="width: 100%; height: 100%; min-height:500px;"></div>
+    <div id="weddingInfo" style="margin-top:10px;">Click on a wedding to get more info.</div>
+  </div>
+  <div class="three columns">
+    <div id="weddingList">
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+var weddings = [
+  {
+    who: "A&B",
+    where: "Serbia",
+    when: "May 10 2013"    
+  },
+  {
+    who: "Riley&Marianne",
+    where: "Klamouth Falls, Oregon",
+    when: "June 29 2013"    
+  },
+  {
+    who: "Celia & François", 
+    where: "Marseille", 
+    when: "July 10th 2013"
+  },
+  {
+    who: "Sarah & Preston", 
+    where: "Ohahu", 
+    when: "July 29th"
+  },
+  {
+    who: "Pablo & Leti", 
+    where: "Palerme, Sicilia", 
+    when: "August 3rd"
+  },
+  {
+    who: "N&C", 
+    where: "Kauai", 
+    when: "Sep 3rd"
+  },
+  {
+    who: "Fred & Ayse", 
+    where: "Avignon",
+    when: "Sep 6th"
+  },
+  {
+    who: "Ivan & Vesna", 
+    where: "Paris, France", 
+    when: "Sep 20th"
+  },
+  {
+    who: "Jo & Rich", 
+    where: "London, UK", 
+    when: "Dec 31st"
+  }
+];
+
+var map;
+var geocoder;
+var polyline;
+
+function weddingMap()
+{
+  // Create a Map and center it on Paris (our starting point ... kinda)
+  var mapOptions = {
+    center: new google.maps.LatLng(48.8742, 2.3470),
+    zoom: 2,
+    mapTypeId: google.maps.MapTypeId.SATELLITE
+  };
+  map = new google.maps.Map(document.getElementById("weddingsMap"),
+      mapOptions);
+      
+  // Create a geocoder object
+  geocoder = new google.maps.Geocoder();
+  
+  // Prepare a polyline object
+  polyline = new google.maps.Polyline({
+    path: [],
+    strokeColor: "white",
+    strokeOpacity: 1,
+    strokeWeight: 2
+  });
+  polyline.setMap(map);
+  
+  weddingList = document.getElementById("weddingList");
+
+  // Add the first marker
+  addWeddingMarker(0);
+}
+
+function addWeddingMarker(index)
+{
+  var wedding = weddings[index];
+  geocoder.geocode( { 'address': wedding.where}, 
+    function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        wedding.latlong = results[0].geometry.location;
+        map.panTo(wedding.latlong);
+        var marker = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: results[0].geometry.location
+        });
+        google.maps.event.addListener(marker, 'click', 
+          function() { clickWedding(wedding); }
+        );
+
+        polyline.getPath().push(wedding.latlong);
+        $("<p><strong>" + wedding.when + " " + wedding.where + "</strong><br/>"+wedding.who+"</p>")
+          .hide()
+          .appendTo("#weddingList")
+          .fadeIn(500)
+          .click(function() { clickWedding(wedding); });
+      }
+      else {
+        alert("Geocode was not successful for '" + wedding + "' for the following reason: " + status);
+      }
+      if (index + 1 < weddings.length) {
+        // Add a little pause for more drama
+        setTimeout(function() { addWeddingMarker(index + 1); }, 800);
+      }
+    }
+  );
+}
+
+function clickWedding(w)
+{
+  console.log("Clicked on " + JSON.stringify(w));
+  map.panTo(w.latlong)
+  $("#weddingInfo").empty();
+  $("#weddingInfo").append( 
+    "<ul class='wedding'><li class='who'>" + w.who + "</li>"
+    + "<li class='when'>" + w.when + "</li>"
+    + "<li class='where'>" + w.where + "</li></ul>");
+}
+
+</script>
