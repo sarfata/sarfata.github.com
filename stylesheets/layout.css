@@ -19,6 +19,7 @@
 
 .container {
   margin-top: 40px;
+  min-height: 400px;
 }
 
 #nav {
@@ -64,6 +65,7 @@ h1 a {
   font-family: Courier;
   width: 100%;
   white-space: pre-wrap;
+  margin-bottom: 20px;
 }
 
 .markdown code {
@@ -96,6 +98,9 @@ h1 a {
   }  
 }
 
+img {
+  width: 100%;
+}
 
 /* #Media Queries
 ================================================== */
