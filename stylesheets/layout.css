@@ -80,6 +80,10 @@ h1 a {
 .social-links li {
   display: inline;
 }
+.social-links img {
+  height: 32px;
+  width: 32px;
+}
 
 /* Article page (based on _template.html) */
   /* When displaying articles, if screen is bigger than 960px, display images on the right side of text */
