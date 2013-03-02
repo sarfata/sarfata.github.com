@@ -9,9 +9,9 @@ As some of you know, I am spending a bit of time (six months) in Senegal. Last w
 
 ![Picture of Orange 3G modem](/img/orange-huawei-3g-modem.jpg)
 
-Turns out this little device is quite amazing: Internet access works on the Mac but also on Linux, I can use it to send and receive SMS, you can even configure it to act as a USB ethernet card and access its embedded web server... quite amazing for $20!
+Turns out this little device is quite amazing: Internet access works on the Mac but also on Linux, I can use it to send and receive SMS, you can even configure it to [act as a USB ethernet card and access its embedded web server][huawei-hilink]... quite amazing for $20!
 
-And as an extra bonus the key I got is not sim-locked so I can use it with any network (if yours is locked and you happen to google huawei + the model of your key, it's hard to find anything but unlocking instructions...).
+And as an extra bonus the key I got is not sim-locked so I can use it with any network (if yours is locked and you happen to google 'huawei + the model of your key', it's hard to find anything but unlocking instructions...).
 
 <!-- more -->
 
@@ -83,6 +83,7 @@ I know a lot of people here in Senegal use old phones plugged into linux box wit
 Configuration Internet access on the Raspberry Pi was not much harder. I will share this sometime soon. 
 
 
+[huawei-hilink]: http://chaddyhv.wordpress.com/2012/08/13/programming-and-installing-huawei-hilink-e3131-under-linux/
 [olitec-link]: http://www.limundo.com/kupovina/Racunari-i-Oprema/Mrezni-uredjaji/Modemi/FAX-MODEM/6818349
 [coolterm]: http://freeware.the-meiers.org/
 [common-at-commands]: http://3g-modem.wetpaint.com/page/common+AT-commands
