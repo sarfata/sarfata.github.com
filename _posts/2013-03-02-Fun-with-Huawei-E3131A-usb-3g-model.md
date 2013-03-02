@@ -9,17 +9,23 @@ As some of you know, I am spending a bit of time (six months) in Senegal. Last w
 
 ![Picture of Orange 3G modem](/img/orange-huawei-3g-modem.jpg)
 
-Turns out this little device is quite amazing: Internet access works on the Mac but also on Linux, I can use it to send and receive SMS, you can even configure it to [act as a USB ethernet card and access its embedded web server][huawei-hilink]... quite amazing for $20!
+[Huawei] is one of those huge chinese companies who are changing the face of Telcom but we almost never hear about them. They provide everything from software to run a mobile network to cheap phones and 3g devices.
 
-And as an extra bonus the key I got is not sim-locked so I can use it with any network (if yours is locked and you happen to google 'huawei + the model of your key', it's hard to find anything but unlocking instructions...).
+It turns out this little device is quite amazing: Internet access works on the Mac but also on Linux, I can use it to send and receive SMS and you can even configure it to [act as a USB ethernet card and access its embedded web server][huawei-hilink]... quite amazing for $20!
+
+A nice bonus is that the key I got is not sim-locked so I can use it with any network (if yours is locked and you happen to google 'huawei + the model of your key', it's hard to find anything but unlocking instructions...).
 
 <!-- more -->
+
+## Installation
 
 I try to stay away from "official" drivers provided by operators: they usually install a lot of bloated software on your computer and do not work very well.
 
 When I plugged this key in my Mac, it automatically added three new serial ports, a network interface (more on this later) and a few usb storage device.
 
 The USB storage device contain the official drivers and I recommend staying away from them as much as possible. The first USB serial device is all you need as you will see.
+
+Bottom line, is you do not need to install anything. Just plug it in.
 
 ## Configuring Internet Access
 
@@ -82,7 +88,7 @@ I know a lot of people here in Senegal use old phones plugged into linux box wit
 
 Configuration Internet access on the Raspberry Pi was not much harder. I will share this sometime soon. 
 
-
+[huawei]: http://en.wikipedia.org/wiki/Huawei
 [huawei-hilink]: http://chaddyhv.wordpress.com/2012/08/13/programming-and-installing-huawei-hilink-e3131-under-linux/
 [olitec-link]: http://www.limundo.com/kupovina/Racunari-i-Oprema/Mrezni-uredjaji/Modemi/FAX-MODEM/6818349
 [coolterm]: http://freeware.the-meiers.org/
