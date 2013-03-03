@@ -2,6 +2,7 @@
 layout: post
 title: Back to basics Resource planning
 category: back-to-basics
+permalink: /back-to-basics/resource-planning/
 ---
 
 # Back to basics: Resource planning
