@@ -95,11 +95,6 @@ h1 a {
   .article li {
     width: 520px;
   }
-  
-  .article img {
-    position: absolute;
-    left: 600px;
-  }  
 }
 
 img {
