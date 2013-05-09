@@ -2,32 +2,26 @@
 layout: page
 ---
 
-<div class="eleven columns">
-{% for post in site.posts %}
-	{% if forloop.first %}
-		<div class="eleven columns" style="margin-bottom: 20px;">
-		  <div class="markdown">
-		    {{ post.content | split:"<!-- more -->" | first }}
-		    {% if post.content contains "<!-- more -->" %}
-  		    <a href="{{ BASE_PATH }}{{ post.url }}">Read more</a>
-  		  {% endif %}
-		  </div>
+<div class="container">
+	<div class="row">
+
+		<div class="span10">
+		{% for post in site.posts %}
+			<div class="span6 offset1" style="margin-bottom: 20px;">
+			  <div class="markdown">
+			    {{ post.content | split:"<!-- more -->" | first }}
+			    {% if post.content contains "<!-- more -->" %}
+	  		    <a href="{{ BASE_PATH }}{{ post.url }}">Read more</a>
+	  		  {% endif %}
+			  </div>
+			</div>
+		{% endfor %}
 		</div>
 
-	{% else %}
-		<div class="five columns" style="margin-bottom: 20px;">
-		  <div class="markdown">
-		    {{ post.content | split:"<!-- more -->" | first }}
-		  </div>
-	    {% if post.content contains "<!-- more -->" %}
-		    <a href="{{ BASE_PATH }}{{ post.url }}">Read more</a>
-		  {% endif %}
+		<div class="span2">
+		  <a class="twitter-timeline" href="https://twitter.com/sarfata" data-widget-id="288348363034861568">Tweets by @sarfata</a>
+		  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
-	{% endif %}
-{% endfor %}
-</div>
 
-<div class="three columns offset-by-one">
-  <a class="twitter-timeline" href="https://twitter.com/sarfata" data-widget-id="288348363034861568">Tweets by @sarfata</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
 </div>

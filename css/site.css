@@ -1,0 +1,32 @@
+.markdown h1 {
+  font-size: 51.996px /* 52px */;
+}
+.markdown h2 {
+  font-size: 39.998000000000005px /* 40px */;
+}
+.markdown h3 {
+  font-size: 28.994000000000003px /* 29px */;
+}
+.markdown h4 {
+  font-size: 28px /* 28px */;
+}
+.markdown h5 {
+  font-size: 23.996px /* 24px */;
+}
+.markdown h6 {
+  font-size: 23.996px /* 24px */;
+}
+
+
+/* About page */
+.about-row {
+  margin-bottom: 30px;
+}
+
+.social-links li {
+  display: inline;
+}
+.social-links img {
+  height: 32px;
+  width: 32px;
+}

@@ -1,53 +1,46 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
 
-	<!-- Basic Page Needs
-	================================================== -->
 	<meta charset="utf-8">
 	<title>Thomas notes</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<!-- Mobile Specific Metas
-	================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!-- CSS
-	================================================== -->
-	<link rel="stylesheet" href="/stylesheets/base.css">
-	<link rel="stylesheet" href="/stylesheets/skeleton.css">
-	<link rel="stylesheet" href="/stylesheets/layout.css">
-	<link rel="stylesheet" href="/stylesheets/syntax.css">
-	
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- Favicons
-	================================================== -->
-	<link rel="shortcut icon" href="/images/favicon.ico">
-	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+  <!-- Loading Bootstrap -->
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+  <!-- Loading Flat UI -->
+  <link href="/css/flat-ui.css" rel="stylesheet">
+
+  <!-- Site specific stylesheet -->
+  <link href="/css/site.css" rel="stylesheet">
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
 
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-15404974-1']);
 		_gaq.push(['_setSiteSpeedSampleRate', 100]);
-		
+
 		{% if page.error404 %}
 
 		var myloc = document.location.pathname;
 		var myref = document.referrer;
 
-		if (myloc.length == 0) {				
+		if (myloc.length == 0) {
 						myloc = "nolocation";
 		}
-		if (myref.length == 0) {				
+		if (myref.length == 0) {
 						myref = "noreferrer";
 		}
 
@@ -55,7 +48,7 @@
 		{% else %}
 		_gaq.push(['_trackPageview']);
 		{% endif %}
-		
+
 		(function() {
 			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
@@ -64,39 +57,66 @@
   	</script>
 
     {% if page.googlemaps %}
-    <script type="text/javascript" 
+    <script type="text/javascript"
   	src="https://maps.googleapis.com/maps/api/js?key=&sensor=false">
     </script>
   	{% endif %}
-  	
+
 </head>
 <body {% if page.googlemaps %}onload="{{ page.googlemaps}}()"{% endif %}>
 	<div class="container">
-		<div class="row remove-bottom">
-			<div class="fourteen columns">
-				<h1 class="remove-bottom"><a href="/index.html">Thomas notes</a></h1>
-			</div>
-			<div id="nav" class="two columns remove-bottom">
-				<ul class="remove-bottom">
-					<li class="remove-bottom"><a href="/about.html">About</a></li>
-				</ul>
-			</div>
-		</div>
-		<hr class="sixteen columns" style="margin-top: 2px;"/>
-		<!-- End of header -->
+		<div class="row">
+			<div class="navbar">
+				<div class="navbar-inner">
+					<div class="container">
+            <a href="/" class="brand">Thomas notes</a>
+            <div class="nav-collapse collapse pull-right" id="nav-collapse-01">
+              <ul class="nav">
+                <li><a href="/about.html">About</a></li>
+              </ul> <!-- /nav -->
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-				{{ content }}
+	{{ content }}
 
-		<!-- Footer -->
-		<hr class="sixteen columns" />
-		<div class="sixteen columns footer">
-			Copyright Thomas Sarlandie 2013<br/>
-			See <a href="/about.html">About</a> page for more copyright information (CC by SA).
-		</div>
-	</div>
-  
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script type="text/javascript" src="/js/tag-links.js">
-  </script>
+  <div class="bottom-menu bottom-menu-inverse">
+    <div class="container">
+      <div class="row">
+        <div class="span2 brand">
+          <a href="/">Thomas notes</a>
+        </div>
+
+        <div class="span8">
+					Copyright Thomas Sarlandie 2013<br/>
+					See <a href="/about.html">About</a> page for more copyright information (CC by SA).
+        </div>
+
+        <div class="span2">
+          <ul class="bottom-icons">
+            <li><a href="#fakelink" class="fui-twitter"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> <!-- /bottom-menu-inverse -->
+
+  <script src="/js/jquery-1.8.3.min.js"></script>
+  <script src="/js/jquery-ui-1.10.3.custom.min.js"></script>
+  <script src="/js/jquery.ui.touch-punch.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/bootstrap-select.js"></script>
+  <script src="/js/bootstrap-switch.js"></script>
+  <script src="/js/flatui-checkbox.js"></script>
+  <script src="/js/flatui-radio.js"></script>
+  <script src="/js/jquery.tagsinput.js"></script>
+  <script src="/js/jquery.placeholder.js"></script>
+  <script src="/js/jquery.stacktable.js"></script>
+  <script src="/js/application.js"></script>
+
+  <script type="text/javascript" src="/js/tag-links.js"></script>
 </body>
 </html>
