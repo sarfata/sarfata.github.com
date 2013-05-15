@@ -3,6 +3,7 @@ layout: default
 ---
 
 <div class="sixteen columns markdown article">
+  <h1>{{page.title}}</h1>
   {{content}}
 
   <div id="disqus_thread"></div>
@@ -10,6 +11,8 @@ layout: default
       var disqus_shortname = 'sarfataorg';
       {% if page.permalink %}
       var disqus_url = "{{ site.production_url }}{{ page.permalink }}";
+      {% else %}
+      var disqus_url = "{{ site.production_url }}{{ page.url }}/";
       {% endif %}
       /* * * DON'T EDIT BELOW THIS LINE * * */
       (function() {

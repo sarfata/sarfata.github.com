@@ -3,8 +3,6 @@ layout: post
 title: Fun with Huawei E3131A USB 3G modem - Mac setup
 ---
 
-# Fun with Huawei E3131A USB 3G modem - Mac setup
-
 As some of you know, I am spending a bit of time (six months) in Senegal. Last week, Orange Senegal ran a promotion: their 3G Internet usb key was available for 10000 FCFA (~15€/$20), including one week of unlimited data access. I already have Internet access through my phone but I thought this would be a fun new toy, especially if I could get it working on the Raspberry Pi as well.
 
 ![Picture of Orange 3G modem](/img/orange-huawei-3g-modem.jpg)
@@ -29,13 +27,13 @@ Bottom line, is you do not need to install anything. Just plug it in.
 
 ## Configuring Internet Access
 
-Going online is probably the first thing you want to do with your new 
-3G modem. 
+Going online is probably the first thing you want to do with your new
+3G modem.
 
 Simply open your Mac Network Preferences, select the Huawei Modem in the list on the left and:
 
  * In Telephone number, write `*99#` - this is the special number used to activate 3G/GPRS access
- 
+
 ![Configuring 3G USB Modem - Phone number](/img/3gmodem-step1.png)
 
  * Click "Advanced"
@@ -86,7 +84,7 @@ To see what SMS have been received, you can type: `at+cmgl="ALL"`. I have not fo
 
 I know a lot of people here in Senegal use old phones plugged into linux box with cheap serial adapters to run SMS gateways. At only $20 (10000F here), this little device is much cheaper than cheap phones and probably a lot easier to get. I think this and the raspberry pi will be a very nice combo.
 
-Configuration Internet access on the Raspberry Pi was not much harder. I will share this sometime soon. 
+Configuration Internet access on the Raspberry Pi was not much harder. I will share this sometime soon.
 
 [huawei]: http://en.wikipedia.org/wiki/Huawei
 [huawei-hilink]: http://chaddyhv.wordpress.com/2012/08/13/programming-and-installing-huawei-hilink-e3131-under-linux/

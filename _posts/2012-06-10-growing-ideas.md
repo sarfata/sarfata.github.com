@@ -1,13 +1,12 @@
 ---
 layout: post
 permalink: /posts/growing-ideas.md
+title: Growing ideas
 ---
-Growing ideas
-=============
 
 Trees, houses and bushes were passing by as our tuk-tuk pulled by a small motorcycle rushed down the unpaved street of Cambodia. I had only been gone for a few weeks but already my mind was rushing to find a new project to work on. This is when it happened.
 
-How the idea came up is probably not that important. It was probably something that had been running unnoticed in my mind. The peace of the moment gave it an opportunity to materialize in my head. What does matter is: How could I find out whether this was *the* idea? 
+How the idea came up is probably not that important. It was probably something that had been running unnoticed in my mind. The peace of the moment gave it an opportunity to materialize in my head. What does matter is: How could I find out whether this was *the* idea?
 
 One thing I have learnt working with creative people is that a good idea does not just show up. It takes time, it takes energy, you need to work at it. And slowly, as you go, the idea matures, transforms and becomes way more than the initial grain of sand.
 

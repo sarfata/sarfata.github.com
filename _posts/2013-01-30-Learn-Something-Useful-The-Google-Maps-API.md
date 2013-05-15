@@ -1,16 +1,14 @@
 ---
 layout: post
-title: Learn something useful A tutorial to the Google Maps API
+title: Learn something useful&#58; A tutorial to the Google Maps API for weddings vizualization
 permalink: /posts/tutorial-google-maps-api/
 ---
-
-# Learn something useful: A tutorial to the Google Maps API for weddings vizualization
 
 Let's learn something useful today! I have always been interested in data vizualization and my recent addictions to [data analysis][dataanalysis] is pushing me to try new things.
 
 One very notable API that I have never got to play with yet is the Google Maps API (actually I have used it a lot on iOS but never in JavaScript).
 
-Turns out I have the perfect problem to go with it: having [trekked around the globe][globetrekkers] my wife and I have the pleasure of being invited to weddings all around the world. We try to go as often as we can. 
+Turns out I have the perfect problem to go with it: having [trekked around the globe][globetrekkers] my wife and I have the pleasure of being invited to weddings all around the world. We try to go as often as we can.
 
 The list for 2013 has been growing very rapidly and it seems it would be quite a challenge to attend all of them. The goal of this little exercise is to:
 
@@ -28,7 +26,7 @@ In this tutorial we will use the latest version of the Google maps API: v3.
 
 ## First step: Get a google maps API key
 
-Go to [the Google API console][googleapiconsole] with your Google Account and enable "Google Maps API v3". 
+Go to [the Google API console][googleapiconsole] with your Google Account and enable "Google Maps API v3".
 
 You can then click on "Google Maps API v3", go to "API access" and get your API key. If you want (and you should) you can restrict your token to be used only on your domain. Otherwise someone could steal your token and use it on another site (then they could use up the 25000 requests per day that Google grants you for free; or do stuff that violates the google api usage agreement).
 
@@ -42,15 +40,15 @@ Add a call to the JavaScript API in your document's head. You need to change two
 <script type="text/javascript"
 src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;sensor=SET_TO_TRUE_OR_FALSE">
 </script>
-{% endhighlight %} 
+{% endhighlight %}
 
 ## Step 3: Create an html element to hold the map
 
-This is pretty straightforward: 
+This is pretty straightforward:
 
 {% highlight html %}
 <div id="weddingsMap" style="width: 100%; height: 100%"></div>
-{% endhighlight %} 
+{% endhighlight %}
 
 ## Step 4: Create the map
 
@@ -58,7 +56,7 @@ Create a global map object:
 
 {% highlight javascript %}
 var map;
-{% endhighlight %} 
+{% endhighlight %}
 
 Create a function to initialize the map:
 
@@ -72,18 +70,18 @@ function initializeMap() {
   map = new google.maps.Map(document.getElementById("weddingsMap"),
       mapOptions);
 }
-{% endhighlight %} 
+{% endhighlight %}
 
 Make sure this function is called when the page is loaded:
 
 {% highlight javascript %}
 <body onload='initializeMap();'>
 {% endhighlight %}
-      
+
 ## Step 5: Transform an address into longitude and latitude
 
 Declare a global variable with your geocoder object
-    
+
 {% highlight javascript %}
 var geocoder;
 {% endhighlight %}
@@ -97,10 +95,10 @@ function initializeMap() {
 
   // Create a geocoder object
   geocoder = new google.maps.Geocoder();
-  
+
 Call the geocoder with a callback that adds a marker to the map.
 
-  geocoder.geocode( { 'address': wedding.where}, 
+  geocoder.geocode( { 'address': wedding.where},
     function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
         map.panTo(results[0].geometry.location);
@@ -109,7 +107,7 @@ Call the geocoder with a callback that adds a marker to the map.
           animation: google.maps.Animation.DROP,
           position: results[0].geometry.location
         });
-        google.maps.event.addListener(marker, 'click', 
+        google.maps.event.addListener(marker, 'click',
           function() { clickWedding(wedding); }
         );
       }
@@ -156,7 +154,7 @@ I have put my data (the list of wedding) in a JSon object in the page and add th
 
 ## Conclusion
 
-This was a fun little afternoon project. As I expected it is extremely easy to do some very interesting data vizualization with Google Maps. 
+This was a fun little afternoon project. As I expected it is extremely easy to do some very interesting data vizualization with Google Maps.
 
 As always, please share your comments and feedbacks below!
 

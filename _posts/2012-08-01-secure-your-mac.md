@@ -1,8 +1,8 @@
 ---
 layout: post
 permalink: /posts/secure-your-mac.md
+title: How to secure your Mac when using it on wireless networks
 ---
-# How to secure your Mac when using it on wireless networks
 
 I recently attended the [Defcon] conference which is well know to be the [most hostile network in the world][defcon-hostile]. One common advice is to [hide all your devices][hide-your-devices].
 
@@ -25,7 +25,7 @@ A few examples:
 * People around you can see what website you go too, what pictures you are looking at, etc
 * In a lot of situations, they can also use your connection to those websites to do things under your names (like post facebook pictures, etc)
 
-This is not always a big deal: I dont care that people around me know what books I am shopping for on amazon or what articles I like on the nytimes. 
+This is not always a big deal: I dont care that people around me know what books I am shopping for on amazon or what articles I like on the nytimes.
 
 When you do care, there is a relatively easy and quite efficient way to protect yourself: use HTTPS. If your website url starts with `https://` and your browser shows a little green lock then your communication is crypted and people will not be able to intercept your exchanges.
 
@@ -51,11 +51,11 @@ You only need two files (which are available from my [github]), the first one is
 #
 # Copyright Thomas Sarlandie 2012
 #
-# This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 
+# This work is licensed under the Creative Commons Attribution-ShareAlike 3.0
 # Unported License: http://creativecommons.org/licenses/by-sa/3.0/
 #
 # Attribution required: please include my name in any published derivative and
-# let me know how you have improved it! 
+# let me know how you have improved it!
 
 COMMAND="$1"
 shift
@@ -72,7 +72,7 @@ safe)
   echo "Going back to Apple default mode"
   pfctl -f /etc/pf.conf
   pfctl -d
-  # note: it would be better to use pfctl -X <token> but getting the token 
+  # note: it would be better to use pfctl -X <token> but getting the token
   # requires parsing the output of 'pfctl -s References'
   ;;
 log)
@@ -92,18 +92,18 @@ The other one is the actual rules that will be loaded ([get the latest version o
 
 {% highlight bash %}
 # voodoo-pf.conf
-# 
+#
 # Firewall rules. Use with voodoo-safe.sh
 #
 # http://www.sarfata.org/posts/setting-up-an-amazon-vpn-server.md
 #
 # Copyright Thomas Sarlandie 2012
 #
-# This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 
+# This work is licensed under the Creative Commons Attribution-ShareAlike 3.0
 # Unported License: http://creativecommons.org/licenses/by-sa/3.0/
 #
 # Attribution required: please include my name in any derivative and let me
-# know how you have improved it! 
+# know how you have improved it!
 
 # The interface that you will use to connect to an unsecure network
 ext_if = "en1"

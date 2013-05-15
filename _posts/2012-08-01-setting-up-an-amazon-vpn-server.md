@@ -1,8 +1,8 @@
 ---
 layout: post
 permalink: /posts/setting-up-an-amazon-vpn-server.md
+title: Setup your very own VPN server with Amazon EC2
 ---
-# Setup your very own VPN server with Amazon EC2
 
 Setting up a VPN server with Amazon EC2 is a great way to protect your privacy. You can turn the server on when you need it, shut it down when you dont. All your traffic will go through your VPN and go out on the internet from your EC2 box so that you are in a really secure environment.
 
@@ -59,7 +59,7 @@ And that's it! Your server is now ready to accept connection from your mac.
 
 I have done my best to simplify the steps and make it easy to reproduce. If it does not work, there are a few things you can do to debug it.
 
-On your mac, look at `/var/log/ppp.log`, this is what a normal connection looks like: 
+On your mac, look at `/var/log/ppp.log`, this is what a normal connection looks like:
 
 {% highlight bash %}
 $ tail -f /var/log/ppp.log
@@ -91,8 +91,8 @@ SSH to your amazon box and look at `/var/log/auth.log` and `/var/log/syslog`, th
 $ ssh ubuntu@<AMAZON_PUBLIC_IP>
 $ tail -f /var/log/auth.log /var/log/syslog
 ==> /var/log/auth.log <==
-Aug  1 22:48:57 ip-10-171-1-123 pluto[4636]: packet from <YOUR_HOME_IP>:500: received Vendor ID payload [RFC 3947] method set to=109 
-Aug  1 22:48:57 ip-10-171-1-123 pluto[4636]: packet from <YOUR_HOME_IP>:500: received Vendor ID payload [draft-ietf-ipsec-nat-t-ike] method set to=110 
+Aug  1 22:48:57 ip-10-171-1-123 pluto[4636]: packet from <YOUR_HOME_IP>:500: received Vendor ID payload [RFC 3947] method set to=109
+Aug  1 22:48:57 ip-10-171-1-123 pluto[4636]: packet from <YOUR_HOME_IP>:500: received Vendor ID payload [draft-ietf-ipsec-nat-t-ike] method set to=110
 Aug  1 22:48:57 ip-10-171-1-123 pluto[4636]: packet from <YOUR_HOME_IP>:500: ignoring unknown Vendor ID payload [8f8d83826d246b6fc7a8a6a428c11de8]
 Aug  1 22:48:57 ip-10-171-1-123 pluto[4636]: packet from <YOUR_HOME_IP>:500: ignoring unknown Vendor ID payload [439b59f8ba676c4c7737ae22eab8f582]
 Aug  1 22:48:57 ip-10-171-1-123 pluto[4636]: packet from <YOUR_HOME_IP>:500: ignoring unknown Vendor ID payload [4d1e0e136deafa34c4f3ea9f02ec7285]
@@ -128,10 +128,10 @@ Aug  1 22:48:58 ip-10-171-1-123 pluto[4636]: "vpnpsk"[2] <YOUR_HOME_IP> #2: Dead
 Aug  1 22:48:58 ip-10-171-1-123 pluto[4636]: "vpnpsk"[2] <YOUR_HOME_IP> #2: transition from state STATE_QUICK_R1 to state STATE_QUICK_R2
 Aug  1 22:48:58 ip-10-171-1-123 pluto[4636]: "vpnpsk"[2] <YOUR_HOME_IP> #2: STATE_QUICK_R2: IPsec SA established transport mode {ESP/NAT=>0x0e800e49 <0x7f060c3f xfrm=AES_256-HMAC_SHA1 NATOA=none NATD=<YOUR_HOME_IP>:32770 DPD=enabled}
 ==> /var/log/syslog <==
-Aug  1 22:49:00 ip-10-171-1-123 xl2tpd[4676]: "/etc/ppp/options.xl2tpd" 
-Aug  1 22:49:00 ip-10-171-1-123 xl2tpd[4676]: "ipparam" 
-Aug  1 22:49:00 ip-10-171-1-123 xl2tpd[4676]: "<YOUR_HOME_IP>" 
-Aug  1 22:49:00 ip-10-171-1-123 xl2tpd[4676]: "/dev/pts/1" 
+Aug  1 22:49:00 ip-10-171-1-123 xl2tpd[4676]: "/etc/ppp/options.xl2tpd"
+Aug  1 22:49:00 ip-10-171-1-123 xl2tpd[4676]: "ipparam"
+Aug  1 22:49:00 ip-10-171-1-123 xl2tpd[4676]: "<YOUR_HOME_IP>"
+Aug  1 22:49:00 ip-10-171-1-123 xl2tpd[4676]: "/dev/pts/1"
 Aug  1 22:49:00 ip-10-171-1-123 xl2tpd[4676]: Call established with <YOUR_HOME_IP>, Local: 8159, Remote: 11087, Serial: 1
 Aug  1 22:49:00 ip-10-171-1-123 pppd[4722]: pppd 2.4.5 started by root, uid 0
 Aug  1 22:49:00 ip-10-171-1-123 pppd[4722]: Using interface ppp0
