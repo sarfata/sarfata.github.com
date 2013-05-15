@@ -3,15 +3,31 @@ layout: page
 ---
 
 <div class="container">
-	<div class="row">
-
-		<div class="span9">
-		{% for post in site.posts %}
-			<div class="row-fluid">
-				<div class="span12 markdown">
+	{% for post in site.posts %}
+		{% if forloop.first %}
+			<div class="row">
+				<div class="span9 markdown">
 			  	<h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
 				</div>
-				<div class="span10" style="margin-bottom: 20px;">
+				<div class="span8 offset1" style="margin-bottom: 20px;">
+				  <div class="markdown">
+				    {{ post.content | split:"<!-- more -->" | first }}
+				    {% if post.content contains "<!-- more -->" %}
+		  		    <a href="{{ BASE_PATH }}{{ post.url }}">Read more</a>
+		  		  {% endif %}
+				  </div>
+				</div>
+				<div class="span3">
+				  <a class="twitter-timeline" href="https://twitter.com/sarfata" data-widget-id="288348363034861568" data-chrome="noborders noscrollbar nofooter" height="400px">Tweets by @sarfata</a>
+	  			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div>
+			</div>
+		{% else %}
+			<div class="row">
+				<div class="span9 markdown">
+			  	<h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
+				</div>
+				<div class="span8 offset1" style="margin-bottom: 20px;">
 				  <div class="markdown">
 				    {{ post.content | split:"<!-- more -->" | first }}
 				    {% if post.content contains "<!-- more -->" %}
@@ -20,13 +36,6 @@ layout: page
 				  </div>
 				</div>
 			</div>
-		{% endfor %}
-		</div>
-
-		<div class="span3">
-		  <a class="twitter-timeline" href="https://twitter.com/sarfata" data-widget-id="288348363034861568" data-chrome="noborders noscrollbar nofooter" height="400px">Tweets by @sarfata</a>
-		  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		</div>
-
-	</div>
+		{% endif %}
+	{% endfor %}
 </div>
