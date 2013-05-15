@@ -1,10 +1,8 @@
 ---
 layout: post
 permalink: /posts/cto101-source-code-management.md
+title: CTO 101&#58; Source code management
 ---
-
-CTO 101: Source code management
-===============================
 
 About CTO101
 ------------
@@ -33,7 +31,7 @@ A few reasons for that:
 
 * Source code is one of the most important intellectual property asset of startups. As an adviser to investors, it amazes me to see that some company just have a ZIP file and are not really sure of what is in it...
 * Your contractor might disappear: are you ready to start from scratch and loose several months re-doing what was done before?
-* Deciding to switch to another contractor should be one of the rights that you can use without permission from the previous contractor. 
+* Deciding to switch to another contractor should be one of the rights that you can use without permission from the previous contractor.
 * Having one source control system for everyone will also help you make sure that the history, versions and branches of your projects are saved and always accessible.
 
 How does SCM work?

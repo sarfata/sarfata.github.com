@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Back to basics - Agile Practices
+title: Back to basics&#58; Agile Practices
 category: back-to-basics
 permalink: /back-to-basics/agile-practices/
 ---
-
-# Back to basics: Agile Practices
 
 I am pursuing my work with the Senegalese startup scene through [CETIC]. After my first presentation on [resources planning][resourceplanning], we met today to speak of basic agile practices.
 
@@ -22,7 +20,7 @@ My selection of practices included:
  * Pair programming
  * Collective Code Ownership
  * Refactoring
- * Test Driven Development 
+ * Test Driven Development
  * Continuous Integration
  * Standup Meeting
  * Kanban (the post-it board)
@@ -33,8 +31,8 @@ My selection of practices included:
 <iframe src="http://www.slideshare.net/slideshow/embed_code/17825448" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">&nbsp;</iframe>
 
 <div style="margin-bottom:15px">
-  <strong> <a href="http://www.slideshare.net/sarfata/back-to-basics-agile-practices" title="Back to Basics: Agile Practices" target="_blank">Back to Basics: Agile Practices</a></strong> from 
-  <strong><a href="http://www.slideshare.net/sarfata" target="_blank">Thomas Sarlandie</a></strong> 
+  <strong> <a href="http://www.slideshare.net/sarfata/back-to-basics-agile-practices" title="Back to Basics: Agile Practices" target="_blank">Back to Basics: Agile Practices</a></strong> from
+  <strong><a href="http://www.slideshare.net/sarfata" target="_blank">Thomas Sarlandie</a></strong>
 </div>
 
 As usual, the slides are available under the CC-BY-SA license.

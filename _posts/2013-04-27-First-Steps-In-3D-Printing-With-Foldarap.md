@@ -4,11 +4,9 @@ title: First Steps In 3D Printing With Foldarap
 category: 3d-printing
 ---
 
-# First steps in 3d printing with Foldarap
-
 About two weeks ago, I met the people of [Jokko Labs][jokkolabs] here in Dakar, and they mentioned they had a 3D printer but currently lacked time and resources to use it. Of course I volunteered, and yesterday I picked up a beautiful [FoldaRap][foldarap] which is a foldable version of the famous [RepRap][reprap]: a 3D printer than can reproduce itself (mostly).
 
-FoldaRap is a design by the french (cocorico!) designer [Emmanuel Gilloz][emmanuelgilloz] and if you are interested, he is running a [crowdfunding campaign][foldarap-goteo] to make a new batch of them. This printer can be folded for easy transport and is really compact. It can still print objects as big as 140x140x140mm. 
+FoldaRap is a design by the french (cocorico!) designer [Emmanuel Gilloz][emmanuelgilloz] and if you are interested, he is running a [crowdfunding campaign][foldarap-goteo] to make a new batch of them. This printer can be folded for easy transport and is really compact. It can still print objects as big as 140x140x140mm.
 
 For 600€, I am really impressed with the quality of the prints - If you want to get started, this might be the moment you were waiting for!
 
@@ -37,13 +35,13 @@ I recommend reading the [FoldaRap User's Manual][foldarap-usermanual] for detail
  1. A 3d modeler to build the 3D objects that you will print. The output format you need is STL. You can use Blender, Google Sketchup (with a STL plugin), Solidworks, OpenScad, etc.
 
     If you want to get started right away, you can skip this first step and go to [thingiverse.com][thingiverse], choose an object that you would like to print and download the STL file directly.
-    
+
  2. A program to transform your STL files into GCode. GCode is the low level input to every 3D printers (like PostScript). It gives us detailed instructions like Move there on this axis, Start extruding plastic, etc.
-    
+
     I have used [Slic3r][slic3r].
 
  3. A program to speak to the printer and transfer the GCode to the printer. The most popular program for the RepRap printers is [Pronterface][Printrun].
- 
+
 ## Install the software
 
 ### Slic3r
@@ -69,13 +67,13 @@ Once pronterface is installed, just launch it, select the USB serial port of the
 Set the proper value for the printer size (Settings->Options):
 
  * Build Dimensions (build_dimensions): 140x140x100+0+0+0
- * Bed Temperature for PLA (bedtemp_pla): 55°C 
+ * Bed Temperature for PLA (bedtemp_pla): 55°C
  * Temperature of the head for PLA (temperature_pla): 195°C
 
 And in the main window, set the speed of the head:
 
  * XY: 15000 mm/min - 2: 100mm/min
- 
+
 You can use the arrows on screen to move the printer head. Make sure all the heads move correctly. Use the "Home" button to bring the printer back to its default position.
 
 I had a problem on the Y axis, and it was not moving well in one direction. Tightening the plastic part that holds the pulley on the opposite side of the motor fixed that.
@@ -84,7 +82,7 @@ I had a problem on the Y axis, and it was not moving well in one direction. Tigh
 
 The bed of the printer (the plate where you print) is heated to help the plastic hold onto it and make sure it keeps its shape when it cools down.
 
-Before you start printing, pre-heat the bed and the extruder (the moving head that mets the plastic). Below the arrows on screen, select the temperatures for PLA (they are pre-set) and click on the set button twice. Enable the "Watch" checkbox and you will see a small graph appear with the temperature of the bed and head. 
+Before you start printing, pre-heat the bed and the extruder (the moving head that mets the plastic). Below the arrows on screen, select the temperatures for PLA (they are pre-set) and click on the set button twice. Enable the "Watch" checkbox and you will see a small graph appear with the temperature of the bed and head.
 
 ![Heating up the printer](/img/foldarap-temperature.png)
 
@@ -124,7 +122,7 @@ I could tell during the first print that the head was way too high when it start
 
 ![Calibration](/img/foldarap-calibration.jpg)
 
-I think I spent at least 1/2 an hour doing that. There are 3 screws and you move the head from one corner to another, adjusting the screws so that the head just barely touches the bed when you press the "Z Home" button in Pronterface ([instructions in the FoldaRap manual][leveling-the-bed]). Of course, when you think it's perfect, you realize one corner is too low or too high ... This step is not specific to FoldaRap and is something you have to do with all extrusion 3D printers but it is a real pain! 
+I think I spent at least 1/2 an hour doing that. There are 3 screws and you move the head from one corner to another, adjusting the screws so that the head just barely touches the bed when you press the "Z Home" button in Pronterface ([instructions in the FoldaRap manual][leveling-the-bed]). Of course, when you think it's perfect, you realize one corner is too low or too high ... This step is not specific to FoldaRap and is something you have to do with all extrusion 3D printers but it is a real pain!
 
 However, it paid off pretty well. The second print (on the right on the picture) is much much nicer.
 

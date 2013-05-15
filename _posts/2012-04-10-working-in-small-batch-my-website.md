@@ -1,10 +1,9 @@
 ---
 layout: post
 permalink: /posts/working-in-small-batch-my-website.md
+title: Working in small batch&#58; starting a website
 ---
 
-# Working in small batch: starting a website
-		
 ## Switching to small batch
 
 I tend to have tons of great ideas of stuff to do, but quite sadly most of them just end up in a huge mental stack that never seems to go down. The more ideas I have, the more frustrated I get that nothing actually gets *done*.

@@ -5,7 +5,10 @@ layout: default
 <div class="container">
   <div class="row">
 
-    <div class="span8 offset2 markdown">
+    <div class="span12 markdown">
+      <h1>{{page.title}}</h1>
+    </div>
+    <div class="span8 offset1 markdown">
       {{content}}
 
       <div id="disqus_thread"></div>
@@ -13,6 +16,8 @@ layout: default
           var disqus_shortname = 'sarfataorg';
           {% if page.permalink %}
           var disqus_url = "{{ site.production_url }}{{ page.permalink }}";
+          {% else %}
+          var disqus_url = "{{ site.production_url }}{{ page.url }}/";
           {% endif %}
           /* * * DON'T EDIT BELOW THIS LINE * * */
           (function() {

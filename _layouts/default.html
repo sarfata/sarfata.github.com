@@ -54,30 +54,23 @@
 			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
-  	</script>
+	</script>
 
-    {% if page.googlemaps %}
+  {% if page.googlemaps %}
     <script type="text/javascript"
   	src="https://maps.googleapis.com/maps/api/js?key=&sensor=false">
     </script>
-  	{% endif %}
+	{% endif %}
 
 </head>
 <body {% if page.googlemaps %}onload="{{ page.googlemaps}}()"{% endif %}>
-	<div class="container">
-		<div class="row">
-			<div class="navbar">
-				<div class="navbar-inner">
-					<div class="container">
-            <a href="/" class="brand">Thomas notes</a>
-            <div class="nav-collapse collapse pull-right" id="nav-collapse-01">
-              <ul class="nav">
-                <li><a href="/about.html">About</a></li>
-              </ul> <!-- /nav -->
-            </div>
-           </div>
-        </div>
-      </div>
+
+  <div class="navbar ">
+    <div class="navbar-inner">
+      <a href="/" class="brand">Thomas notes</a>
+      <ul class="nav pull-right">
+        <li class="{% if page.url == '/about.html' %}active{% endif %}"><a href="/about.html">About</a></li>
+      </ul>
     </div>
   </div>
 
@@ -92,7 +85,7 @@
 
         <div class="span8">
 					Copyright Thomas Sarlandie 2013<br/>
-					See <a href="/about.html">About</a> page for more copyright information (CC by SA).
+					See <a href="/about.html">About page</a> for more copyright information (CC by SA).
         </div>
 
         <div class="span2">
