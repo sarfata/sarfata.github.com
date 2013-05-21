@@ -64,19 +64,25 @@
 
 </head>
 <body {% if page.googlemaps %}onload="{{ page.googlemaps}}()"{% endif %}>
-
-  <div class="navbar ">
-    <div class="navbar-inner">
-      <a href="/" class="brand">Thomas notes</a>
-      <ul class="nav pull-right">
-        <li class="{% if page.url == '/about.html' %}active{% endif %}"><a href="/about.html">About</a></li>
-      </ul>
+  <div class="container">
+    <div class="row header-row">
+      <div class="navbar">
+        <div class="navbar-inner">
+            <a href="/" class="brand">Thomas notes</a>
+            <ul class="nav">
+            </ul>
+            <ul class="nav pull-right">
+              <li class="{% if page.url == '/about.html' %}active{% endif %}"><a href="/about.html">About</a></li>
+              <li><a href="http://twitter.com/sarfata" target="_blank" class="fui-twitter"></a></li>
+            </ul>
+        </div>
+      </div>
     </div>
   </div>
-
+  
 	{{ content }}
 
-  <div class="bottom-menu bottom-menu-inverse">
+  <div class="bottom-menu">
     <div class="container">
       <div class="row">
         <div class="span2 brand">
@@ -85,7 +91,7 @@
 
         <div class="span8">
 					Copyright Thomas Sarlandie 2013<br/>
-					See <a href="/about.html">About page</a> for more copyright information (CC by SA).
+					See <a href="/about.html">About page</a> for more copyright information (CC-BY-SA).
         </div>
 
         <div class="span2">

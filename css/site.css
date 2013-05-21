@@ -17,6 +17,10 @@
   font-size: 23.996px /* 24px */;
 }
 
+/* Header */
+.header-row {
+  margin-top: 20px;
+}
 
 /* About page */
 .about-row {
@@ -27,6 +31,22 @@
   display: inline;
 }
 .social-links img {
+  -webkit-filter: grayscale(100%);
   height: 32px;
   width: 32px;
+}
+.social-links img:hover {
+  -webkit-filter: grayscale(0%);
+}
+
+/* Wedding page */
+#weddingsMap {
+  width: 100%; 
+  height: 500px;
+}
+#weddingInfo {
+  margin-top:10px;
+}
+#weddingInfo > h1 {
+  
 }
