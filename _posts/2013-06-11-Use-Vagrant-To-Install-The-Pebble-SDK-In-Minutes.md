@@ -79,11 +79,11 @@ Look on your computer, a `myfirstwatchface` folder should have appeared in your 
 
 For more information on how to get started writing watchfaces and apps for Pebble, [read the docs][pebblesdkdoc]!
 
-To save some disk space (~1.5Gb) you can destroy the virtual machine at anytime (`vagrant destroy`). Of course, it will not touch your project files on your computer. The next time you need it, just run `vagrant up` and it will be ready again in a few seconds.
+To save some RAM and disk space (~1.5Gb) you can destroy the virtual machine at anytime (`vagrant destroy`). Of course, it will not touch your project files on your computer. The next time you need it, just run `vagrant up` and it will be ready again in a few seconds.
 
 ## Q&A
 
-Hope this helps some of you get started with the Pebble SDK! Feel free to post questions in the comments below or on the Pebble forum.
+Hope this helps some of you get started with the Pebble SDK! Feel free to post questions in the comments below or on the [Pebble forum][pebbleforum].
 
 ### Post-Scriptum: How to prepare the Vagrant image?
 
@@ -147,3 +147,4 @@ For the sake of repeatability, here is how I prepared the image:
 [vagrantdownload]: http://downloads.vagrantup.com/
 [virtualbox]: https://www.virtualbox.org/wiki/Downloads
 [pebblesdkdoc]: http://developer.getpebble.com/1/02_Guides/01_AppsVsWatchfaces
+[pebbleforum]: http://forums.getpebble.com/discussion/5951/install-the-sdk-in-minutes-on-any-operating-system-with-vagrant
