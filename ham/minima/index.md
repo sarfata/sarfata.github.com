@@ -1,9 +1,11 @@
 ---
 title: Minima
-layout: post
+layout: article
 ---
 
-The [Minima](http://www.phonestack.com/farhan/minima.html) is an amateur radio receiver and transmitter designed by [Ashaar Farhan](http://www.phonestack.com/farhan/).
+<p class="lead">
+The <a href="http://www.phonestack.com/farhan/minima.html">Minima</a> is an amateur radio transceiver designed by <a href="http://www.phonestack.com/farhan/">Ashaar Farhan</a>.
+</p>
 
 ### Characteristics
 
