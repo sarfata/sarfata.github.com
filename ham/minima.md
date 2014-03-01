@@ -21,6 +21,7 @@ Its main characteristics are:
 
  - Join the [Minima mailing list](http://www.phonestack.com/farhan/minima.html) (Subscription form at the top of the page)
  - Read [the official Wiki](http://hfsignals.org) for the Minima and Radiono (the name given to the software)
+ - Take a look at [Mark G0MGX](http://g0mgx.blogspot.co.uk) blog. He has lots of great articles on building the Minima.
 
 ### My minima
 
@@ -88,10 +89,76 @@ Used qrpme mepads
 
 ![](/ham/images/minima-lcd.jpg)
 
+
+## Calibrating the oscillator
+
+When I first started my Minima, the output frequency was far from spot-on:
+
+![](https://docs.google.com/spreadsheet/oimg?key=0As9CZnZ-A5a2dEZaM1dlWVdVX3pXaUlJMXd0cHNscHc&oid=4&zx=t2o9z3ygr2j9)
+
+I did some research and made a pull-request to solve this problem:
+
+ - [Wiki page on Si570 Calibration](http://www.hfsignals.org/index.php/Si570)
+ - [Pull-Request to add auto-calibration at startup](https://github.com/afarhan/radiono/pull/4)
+
+**You still need to tell the software what is the factory calibrated frequency of your Si570**
+
+## Building the KISS Mixer
+
+Make sure you wind those transformers really well. Use a drill to wind the three wires into a trifilar winding. I have tried lots of other methods but trust me, a small drill with a hook is the best solution.
+
+You will not be able to adjust the bias of the two JET transistors now. Don't worry about it.
+
+## Building the BFO Mixer
+
+Followed Farhan's instructions to match the diodes. I used my Fluke high-resolution mode (0.1 mV) which was probably overkill because I realized after having measured 20 diodes that just blowing on them or touching them would change the reading by several millivolts.
+
+If you can get them to match at +/- 1 mV, you should consider yourself very happy!
+
+![](/ham/images/minima-matching-diodes.jpg)
+
+
+## Building the RF pre-amp
+
+Nothing special here. Just a bunch of transistors. I did manage to get the last output resistor wrong (22 ohms instead of 220 ohms). I was wondering why that last transistor was heating so much ... I realized my mistake when a few days later the resistor started getting brown...
+
+
+## Building the BFO
+
+
+![](/ham/images/minima-firsttime-in-box.jpg)
+
+![](/ham/images/minima-firsttime-in-box2.jpg)
+
+## Building the Audio pre-amp
+
+![](/ham/images/minima-audio-preamp.jpg)
+
+## Building the Audio amp
+
+Used an LM386
+
+![](/ham/images/minima-lm386-audio-amp.jpg)
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/V4Ji6EvhLB0" frameborder="0" allowfullscreen="true">
+
+</iframe>
+
+
 ## Debugging the minima
 
 ![](/ham/images/minima-complete-rx.jpg)
 
+![](/ham/images/minima-bfomixer.jpg)
 
-## First sounds
+## Tuning
+
+About the KISS mixer adjustment:
+
+> "I adjust it for minimum LO leak to rf port.
+> - f"
+
+## First real signal
+
+
 
