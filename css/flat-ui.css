@@ -697,106 +697,21 @@ a:hover {
   color: #2ecc71;
   text-decoration: none;
 }
-h1,
-.h1 {
-  font-size: 62.006px /* 64px */;
-}
-h2,
-.h2 {
-  font-size: 51.996px /* 52px */;
-}
-h3,
-.h3 {
-  font-size: 39.998000000000005px /* 40px */;
-}
-h4,
-.h4 {
-  font-size: 28.994000000000003px /* 29px */;
-}
-h5,
-.h5 {
-  font-size: 28px /* 28px */;
-}
-h6,
-.h6 {
-  font-size: 23.996px /* 24px */;
-}
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  line-height: 1.2em;
-}
-h1 {
-  font-weight: 700;
-}
-h2 {
-  font-weight: 700;
-  margin-bottom: 2px;
-}
-h3 {
-  font-weight: 700;
-  margin-bottom: 4px;
-  margin-top: 2px;
-}
-h4 {
-  font-weight: 500;
-  margin-top: 4px;
-}
-h5 {
-  font-weight: 500;
-}
-h6 {
-  font-weight: normal;
-}
-p {
-  font-size: 18.004px;
-  /* 18px */
-
-  line-height: 1.722169;
-  /* 31px */
-
-}
-.lead {
-  font-size: 28px;
-  /* 28px */
-
-  line-height: 1.4642745000000001;
-  /* 41px */
-
-  font-weight: 300;
-}
-small {
-  font-size: 84%;
-  /* 15px */
-
-  line-height: 2.050846;
-  /* 31px */
-
-}
 blockquote {
   position: relative;
   border-left: none;
   padding-left: 19px;
 }
 blockquote p {
-  font-size: 20.006px;
+/*  font-size: 20.006px;
   line-height: 1.549829;
-  font-weight: normal;
+*/  font-weight: normal;
   margin-bottom: .4em;
 }
 blockquote small {
-  font-size: 18.004px;
+/*  font-size: 18.004px;
   line-height: 1.722169;
-  font-style: italic;
+*/  font-style: italic;
   color: #34495e;
 }
 blockquote small:before {
@@ -821,9 +736,9 @@ blockquote:before {
   border-radius: 5px;
 }
 .img-comment {
-  font-size: 14.994px;
+/*  font-size: 14.994px;
   line-height: 1.231;
-  font-style: italic;
+*/  font-style: italic;
   margin: 24px 0;
 }
 .text-primary {

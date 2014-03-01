@@ -4,38 +4,20 @@ layout: page
 
 <div class="container">
 	{% for post in site.posts %}
-		{% if forloop.first %}
-			<div class="row">
-				<div class="span9 markdown">
-			  	<h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
-				</div>
-				<div class="span8 offset1" style="margin-bottom: 20px;">
-				  <div class="markdown">
-				    {{ post.content | split:"<!-- more -->" | first }}
-				    {% if post.content contains "<!-- more -->" %}
-		  		    <p>
-                <a href="{{ BASE_PATH }}{{ post.url }}">Read more</a>
-              </p>
-		  		  {% endif %}
-				  </div>
-				</div>
+		<div class="row">
+			<div class="span9 markdown">
+		  	<h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
 			</div>
-		{% else %}
-			<div class="row">
-				<div class="span9 markdown">
-			  	<h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
-				</div>
-				<div class="span8 offset1" style="margin-bottom: 20px;">
-				  <div class="markdown">
-				    {{ post.content | split:"<!-- more -->" | first }}
-				    {% if post.content contains "<!-- more -->" %}
-		  		    <p>
-                <a href="{{ BASE_PATH }}{{ post.url }}">Read more</a>
-              </p>
-		  		  {% endif %}
-				  </div>
-				</div>
+			<div class="span8 offset1" style="margin-bottom: 20px;">
+			  <div class="markdown">
+			    {{ post.content | split:"<!-- more -->" | first }}
+			    {% if post.content contains "<!-- more -->" %}
+	  		    <p>
+              <a href="{{ BASE_PATH }}{{ post.url }}">Read more</a>
+            </p>
+	  		  {% endif %}
+			  </div>
 			</div>
-		{% endif %}
+		</div>
 	{% endfor %}
 </div>

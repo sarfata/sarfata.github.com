@@ -1,20 +1,26 @@
+/* Go back to normal bootstrap values */
+p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
 .markdown h1 {
-  font-size: 51.996px /* 52px */;
+  font-size: 38;
 }
 .markdown h2 {
-  font-size: 39.998000000000005px /* 40px */;
+  font-size: 30;
 }
 .markdown h3 {
-  font-size: 28.994000000000003px /* 29px */;
+  font-size: 28px;
 }
 .markdown h4 {
-  font-size: 28px /* 28px */;
+  font-size: 28px;
 }
 .markdown h5 {
-  font-size: 23.996px /* 24px */;
+  font-size: 24px;
 }
 .markdown h6 {
-  font-size: 23.996px /* 24px */;
+  font-size: 24px;
 }
 
 /* Header */
@@ -26,7 +32,6 @@
 .about-row {
   margin-bottom: 30px;
 }
-
 .social-links li {
   display: inline;
 }
@@ -41,12 +46,12 @@
 
 /* Wedding page */
 #weddingsMap {
-  width: 100%; 
+  width: 100%;
   height: 500px;
 }
 #weddingInfo {
   margin-top:10px;
 }
 #weddingInfo > h1 {
-  
+
 }
