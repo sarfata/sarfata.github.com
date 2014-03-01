@@ -72,6 +72,10 @@
             <ul class="nav">
             </ul>
             <ul class="nav pull-right">
+{% comment %}
+              <li class="{% if page.url contains '/ham' %}active{% endif %}"><a href="/ham/">HAM Radio</a></li>
+{% endcomment %}
+              <li class="{% if page.url contains '/projects/' %}active{% endif %}"><a href="/projects/">Projects</a></li>
               <li class="{% if page.url == '/about.html' %}active{% endif %}"><a href="/about.html">About</a></li>
               <li><a href="http://twitter.com/sarfata" target="_blank" class="fui-twitter"></a></li>
             </ul>
@@ -79,7 +83,7 @@
       </div>
     </div>
   </div>
-  
+
 	{{ content }}
 
   <div class="bottom-menu">

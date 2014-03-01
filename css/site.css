@@ -28,6 +28,10 @@ p {
   margin-top: 20px;
 }
 
+.about-row h4 {
+  margin-top: 0px;
+}
+
 /* About page */
 .about-row {
   margin-bottom: 30px;
