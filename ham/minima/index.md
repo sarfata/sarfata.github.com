@@ -147,20 +147,69 @@ Used an LM386
 </iframe>
 
 
-## Debugging the minima
+## Debugging the minima in RX
+
+When I put everything together, my Minima showed very little sensitivity. I could hear a strong signal that I injected from a VFO in the antenna - or even another emitter a few meters away but I could not get any real signal and the band were awfully quiet. It did not sound like a "receiver".
 
 ![](/ham/images/minima-complete-rx.jpg)
 
 ![](/ham/images/minima-bfomixer.jpg)
 
+I went through each stage, measured gains, checked bias on the transistors, compared with other builders, rewound my transformers 3 times, etc.
+
+Long story short: I had misplaced one capacitor in the BFO. Instead of putting a 100pF between Q9 base and emitter, I had put it between the base and the collector. The result is that the BFO signal was much less stronger that it should have been.
+
+Once I fixed this:
+
+<object width="420" height="315"><param name="movie" value="//www.youtube.com/v/ZkTXw4LWorU?hl=en_US&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube.com/v/ZkTXw4LWorU?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="420" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
+I had to play around with the BFO frequency to be able to listen to signal. More work to do there!
+
+## Playing with a spectrum analyzer and the crystal filter
+
+I have secured access to a spectrum analyzer (the usual suspect: rigol dsa-815-tg). I have done some basic experiment with it including one with my cristal filter. With almost 6kHz bandwidth, it's probably going to be a bit too large and I will have to re-work it a little bit.
+
+![Crystal Filter on the Spectrum Analyzer](/ham/images/minima-sa-crystalfilter.png)
+
+My [initial measurements](https://docs.google.com/spreadsheet/ccc?key=0As9CZnZ-A5a2dEZaM1dlWVdVX3pXaUlJMXd0cHNscHc&usp=drive_web#gid=1) were not incorrect but I had an "optimistic" way of guess-timating where the 3dB bandwidth fell. The spectrum analyzer is more deterministic...
+
+## Building the TX stages and boxing the Minima
+
+I added the TX pre-amp and the Mic pre-amp.
+
+![Minima TX Stages](/ham/images/minima-txstages.jpg)
+
+With everything on the board, it is starting to get crowded:
+
+![Minima RF Board TX Stages](/ham/images/minima-rfboard-withtxstages.jpg)
+
+I don't really do CW at the moment but I decided to include the CW tone generator anyway. There is a lot of fun stuff we could do with Arduino + CW. Next piece is the RX/TX relay and the few transistors that go around it. I have decided to keep my LM386 amp for the moment. It has been doing a great job.
+
+![Minima RF Board Complete](/ham/images/minima-rfboard-complete.jpg)
+
+Finally I did some metal work and wired all the control signals between the Minima and the RF Board.
+
+![Inside the box](/ham/images/minima-inside-the-box.jpg)
+
+My Minima is almost complete: Need to get some audio jack for a microphone input, a headphone jack and a CW key input. I would also like to wire the PTT on the Mic jack. More on that later.
+
+![Minima Closed](/ham/images/minima-closed-20140302.jpg)
+
+At the moment my Minima is stuck in transmit but this is a known problem (you need an external pull-up resistor on the PTT line). I will add this soon. I had not done any real testing of the TX stages so I just plugged the minima in the SA and looked at the output.
+
+This is what a 28.200 Mhz signal modulated with the CW tone looks like. The peak at 48 Mhz is the local oscillator and it should be much more attenuated. I will look into this.
+
+![Crystal Filter on the Spectrum Analyzer](/ham/images/minima-sa-txcw.png)
+
+<!--
 ## Tuning
+
+(note done yet)
 
 About the KISS mixer adjustment:
 
 > "I adjust it for minimum LO leak to rf port.
 > - f"
 
-## First real signal
-
-
+-->
 
