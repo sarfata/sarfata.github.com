@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
 
-	<meta charset="utf-8">
-	<title>Thomas notes</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
+  <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+  {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+
+  <meta name="author" content="Thomas Sarlandie">
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,40 +30,40 @@
     <script src="js/html5shiv.js"></script>
   <![endif]-->
 
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-15404974-1']);
-		_gaq.push(['_setSiteSpeedSampleRate', 100]);
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-15404974-1']);
+    _gaq.push(['_setSiteSpeedSampleRate', 100]);
 
-		{% if page.error404 %}
+    {% if page.error404 %}
 
-		var myloc = document.location.pathname;
-		var myref = document.referrer;
+    var myloc = document.location.pathname;
+    var myref = document.referrer;
 
-		if (myloc.length == 0) {
-						myloc = "nolocation";
-		}
-		if (myref.length == 0) {
-						myref = "noreferrer";
-		}
+    if (myloc.length == 0) {
+            myloc = "nolocation";
+    }
+    if (myref.length == 0) {
+            myref = "noreferrer";
+    }
 
-		_gaq.push(['_trackPageview', "/404/" + myloc.replace(/\//g, "_") + "/" + myref.replace(/https*:\/\//i, "").replace(/\//g, "_")]);
-		{% else %}
-		_gaq.push(['_trackPageview']);
-		{% endif %}
+    _gaq.push(['_trackPageview', "/404/" + myloc.replace(/\//g, "_") + "/" + myref.replace(/https*:\/\//i, "").replace(/\//g, "_")]);
+    {% else %}
+    _gaq.push(['_trackPageview']);
+    {% endif %}
 
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 
   {% if page.googlemaps %}
     <script type="text/javascript"
-  	src="https://maps.googleapis.com/maps/api/js?key=&sensor=false">
+    src="https://maps.googleapis.com/maps/api/js?key=&sensor=false">
     </script>
-	{% endif %}
+  {% endif %}
 
 </head>
 <body {% if page.googlemaps %}onload="{{ page.googlemaps}}()"{% endif %}>
@@ -84,7 +87,7 @@
     </div>
   </div>
 
-	{{ content }}
+  {{ content }}
 
   <div class="bottom-menu">
     <div class="container">
@@ -94,8 +97,8 @@
         </div>
 
         <div class="span8">
-					Copyright Thomas Sarlandie 2013, 2014<br/>
-					See <a href="/about.html">About page</a> for more copyright information (CC-BY-SA).
+          Copyright Thomas Sarlandie 2013, 2014<br/>
+          See <a href="/about.html">About page</a> for more copyright information (CC-BY-SA).
         </div>
 
         <div class="span2">
