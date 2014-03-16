@@ -23,6 +23,11 @@ p {
   font-size: 24px;
 }
 
+.markdown table {
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+
 /* Header */
 .header-row {
   margin-top: 20px;
