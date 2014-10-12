@@ -7,6 +7,9 @@ layout: article
 The <a href="http://www.phonestack.com/farhan/minima.html">Minima</a> is an amateur radio transceiver designed by <a href="http://www.phonestack.com/farhan/">Ashaar Farhan</a>.
 </p>
 
+In October 2014, I gave a presentation on the Minima at Pacificon. [You can look at the slides and handouts and download an audio recording](/2014/10/Minima-Presentation-at-Pacificon/).
+
+
 ### Characteristics
 
 Its main characteristics are:
