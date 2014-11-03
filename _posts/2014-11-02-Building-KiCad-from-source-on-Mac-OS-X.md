@@ -63,12 +63,14 @@ You will of course need Xcode. Download and install it from the Mac AppStore.
 Then you will need [brew]. If you do not have it installed yet, this should be
 enough to download and install it on your computer:
 
-    ruby -e "$(curl -fsSL
-    https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 There are a few dependencies you need to install with brew:
 
-    brew install cmake brew install bzr brew install glew brew install cairo
+    brew install cmake
+    brew install bzr
+    brew install glew
+    brew install cairo
 
 Now simply follow these instructions to download KiCad source code from its
 [main repository on Bazaar][kicad-bzr]. (Note: if you do not want to use Bazaar,
@@ -76,12 +78,14 @@ there is a [GitHub mirror][kicad-git]. It should work but some of the compile
 steps seem to require the bzr command line tool. Please let me know if you try
 this with success).
 
-    $ mkdir KiCad $ cd KiCad $ bzr branch lp:kicad
+    mkdir KiCad
+    cd KiCad
+    bzr branch lp:kicad
 
 Then you need to tell Bazaar who you are. You do not need an account, just a
 name and email address:
 
-    $ bzr whoami "YourName <yourname@email.com>"
+    bzr whoami "YourName <yourname@email.com>"
 
 ### Install wxWidgets or wxPython
 
@@ -97,7 +101,7 @@ moment.
 
 Now you need to [download][wxw-download], and decompress it:
 
-    $ tar -jxf ~/Downloads/wxWidgets-3.0.2.tar.bz2
+    tar -jxf ~/Downloads/wxWidgets-3.0.2.tar.bz2
 
 > **Attention Mac OS X 10.10 Users (Yosemite)**
 >
@@ -116,14 +120,17 @@ Now you need to [download][wxw-download], and decompress it:
 
 And compile it with the script provided with KiCad:
 
-    $ sh kicad/scripts/osx_build_wx.sh wxWidgets-3.0.2 wx-bin kicad "-j4" (this
-    takes a while ...)
+    sh kicad/scripts/osx_build_wx.sh wxWidgets-3.0.2 wx-bin kicad "-j4" 
+
+(this takes a while ...)
 
 ### Configure and build KiCad
 
 Now you should have everything required to configure KiCad, run:
 
-    $ mkdir build $ cd build $ cmake ../kicad \ -DCMAKE_C_COMPILER=clang \
+    mkdir build
+    cd build
+    cmake ../kicad \ -DCMAKE_C_COMPILER=clang \
     -DCMAKE_CXX_COMPILER=clang++ \
     -DwxWidgets_CONFIG_EXECUTABLE=../wx-bin/bin/wx-config \
     -DKICAD_SCRIPTING=OFF \ -DKICAD_SCRIPTING_MODULES=OFF \
@@ -132,7 +139,8 @@ Now you should have everything required to configure KiCad, run:
 
 If everything looks ok, run:
 
-    $ make $ make install
+    make
+    make install
 
 And now you should have a working copy of KiCad in the bin folder.
 
@@ -141,9 +149,9 @@ And now you should have a working copy of KiCad in the bin folder.
 Finally, you will need to get the KiCad standard library (the components) and
 install it locally:
 
-    $ cd ~/Library/Application\ Support/
-    $ git clone https://github.com/KiCad/kicad-library.git kicad
-    $ cd kicad && touch template/kicad.pro
+    cd ~/Library/Application\ Support/
+    git clone https://github.com/KiCad/kicad-library.git kicad
+    cd kicad && touch template/kicad.pro
 
 (thanks to [sethtrain] for this last step. Took me a while to figure out ...)
 
@@ -151,7 +159,8 @@ install it locally:
 
 To launch KiCad, just run:
 
-    $ cd KiCad $ open bin/kicad.app
+    cd KiCad
+    open bin/kicad.app
 
 Hope you find these instructions helpful! Please post a note in the comments
 below if you have questions or feedback to share. Another great resource is the
@@ -199,7 +208,7 @@ The fix is extremely simple:
 
 
 [hackrf]: https://github.com/mossmann/hackrf
-[wxwdownload]: http://sourceforge.net/projects/wxwindows/files/3.0.2/wxWidgets-3.0.2.tar.bz2/download
+[wxw-download]: http://sourceforge.net/projects/wxwindows/files/3.0.2/wxWidgets-3.0.2.tar.bz2/download
 [ce-kicad-playlists]: https://www.youtube.com/user/contextualelectronic/playlists
 [brew]: http://brew.sh
 [sethtrain]: https://forum.kicad.info/t/tips-for-running-kicad-on-mac-os-x/70
