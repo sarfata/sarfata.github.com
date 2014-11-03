@@ -208,4 +208,4 @@ The fix is extremely simple:
 [kicad-git]: https://github.com/KiCad/kicad-source-mirror
 [wxbug]: http://trac.wxwidgets.org/ticket/16329
 [kicad-forum]: https://forum.kicad.info/
-[kicad-binaries]: /2014/11/Kicad-OS-X-Binaries/
+[kicad-binaries]: /2014/11/KiCad-OS-X-Binaries/
