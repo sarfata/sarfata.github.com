@@ -78,7 +78,7 @@ For reference, these are the values [Mark](http://g0mgx.blogspot.co.uk/search/la
   .39 uH  | 2   | T37-6   | 11             | 10               |
   .66 uH  | 2       | T50-2   | 12             | 10               |
   .78 uH  | 3   | T50-2   | 13             | 11               |
-   3 uH |     3 |     T33 | 25             | 24               |
+   3 uH |     3 |     T68-6 | 25             | 24               |
    RFC |     3 | FT37-43 | 25             | 24               |
 
 
