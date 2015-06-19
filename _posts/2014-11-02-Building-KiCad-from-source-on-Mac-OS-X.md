@@ -4,6 +4,10 @@ title: Building KiCad from source on Mac OS X
 layout: post
 ---
 
+**EDIT: KiCad [now offers pre-compiled official
+binaries](http://downloads.kicad-pcb.org/osx/), I recommend using
+them.**
+
 **tldr:**
 
  * If you are looking for a quick way to get KiCad running, please refer to [my newer

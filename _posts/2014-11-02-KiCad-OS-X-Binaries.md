@@ -4,6 +4,9 @@ layout: post
 title: KiCad OS X Binaries
 ---
 
+**EDIT: KiCad [now offers pre-compiled official
+binaries](http://downloads.kicad-pcb.org/osx/), I recommend using them.**
+
 Earlier today I shared [compilation instructions for KiCad on Mac OS
 X][compile-kicad]. 
 
