@@ -14,6 +14,14 @@ This post is a followup to a [first post][firewall-article] in which I introduce
 
 We will see how to see an IPSec / L2TP VPN. They are very secure, and very easy to configure on the client side, supported by most operating systems without any extra tools to download or install.
 
+**Update July 2016**:
+
+Thanks for your interest in this project! [Lin
+Song](https://www.linkedin.com/in/linsongui) has built a newer version which is
+tested with 2016 releases of Ubuntu/Debian/CentOS/RHEL and includes VPN setup
+instructions for a lot more platforms. [It is available under the same license
+here.](https://github.com/hwdsl2/setup-ipsec-vpn).
+
 ## Alternatives
 
 If you dont want to go through the trouble of setting up an EC2 box, you can buy a VPN from a provider such as [Black VPN][blackvpn] which will give you a VPN into a country of your choice for only 49€ per year. I think it's a pretty good deal (and they also have a full privacy package which also gives you access to all of their VPN servers including Lithuania, Russia, etc should you have a need for that).
