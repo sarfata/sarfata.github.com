@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /posts/cto101-source-code-management.md
+permalink: /posts/cto101-source-code-management.md/
 title: CTO 101&#58; Source code management
 ---
 

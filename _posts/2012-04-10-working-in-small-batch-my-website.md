@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /posts/working-in-small-batch-my-website.md
+permalink: /posts/working-in-small-batch-my-website.md/
 title: Working in small batch&#58; starting a website
 ---
 

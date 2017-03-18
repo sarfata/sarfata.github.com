@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /posts/growing-ideas.md
+permalink: /posts/growing-ideas.md/
 title: Growing ideas
 ---
 
@@ -85,6 +85,6 @@ So far, the experiment has not really helped to grow the idea. The feedback was 
 [leanstartupvideo]: http://www.youtube.com/watch?v=i65PaoTlVKg&feature=youtu.be
 [mvp]: http://en.wikipedia.org/wiki/Minimum_viable_product
 [nest]: http://www.nest.com/
-[my-website]: working-in-small-batch-my-website.md
+[my-website]: /posts/working-in-small-batch-my-website.md
 [tbideas]: http://www.tbideas.com/
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /posts/setting-up-an-amazon-vpn-server.md
+permalink: /posts/setting-up-an-amazon-vpn-server.md/
 title: Setup your very own VPN server with Amazon EC2
 ---
 
